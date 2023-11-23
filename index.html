@@ -18,41 +18,68 @@
       </ul>
     </p>
     <hr>
-    <h2>My projects</h2>
-    <div id="projects">
-      <div class="project_card" id="0">
-        <h3>Discord bot</h3>
-        <br>
-        <a href="https://github.com/0x32767/0x102-discord-bot">Click here!</a>
-        <br>
-        <img src="assets/discord.png" alt="discord logo" class="project_thumbnail">
-        <br>
-        <b class="see-project-details">More details</b>
-      </div>
-    </div>
-    <div id="project-info"></div>
+    <div id="projects"></div>
+    <hr>
+    <div id="project_info"></div>
   </body>
   <script>
-    function createCORSRequest(method, url){
-        var xhr = new XMLHttpRequest();
-        if ("withCredentials" in xhr){
-            xhr.open(method, url, true);
-        } else if (typeof XDomainRequest != "undefined"){
-            xhr = new XDomainRequest();
-            xhr.open(method, url);
-        } else {
-            xhr = null;
-        }
-        return xhr;
-    }
+    fetch("projects.json").then(dat => dat.json()).then((data) => { // create cards
+      for (card of data) {
+        let html = document.createElement("div");
+        html.className = "project_card";
+        html.id = card.id;
 
-    for (element of document.getElementsByClassName("see-project-details"))
-    {
-      element.onclick = (event) => {
-        let req = createCORSRequest("GET", "projects-info/"+event.target.parentElement.id+".json");
+        let title=document.createElement("h3");
+        title.className = "project_title";
+        title.innerText = card.title;
+        html.appendChild(title)
 
-        req.onload = () => {}
+
+        let link = document.createElement("a");
+        link.href = card.url;
+        
+        html.appendChild(document.createElement("br"))
+    
+        let img = document.createElement("img");
+        img.className = "project_thumbnail";
+        img.src = card.img;
+        img.alt = `"${card.img}"`;
+        link.appendChild(img)
+
+        html.appendChild(link)
+        
+        
+        html.appendChild(document.createElement("br"))
+        
+        let details = document.createElement("b");
+        details.innerText = "More Project Details";
+        details.className = "see-project-details";
+        html.appendChild(details);
+
+        html.appendChild(document.createElement("br"))
+        
+        let brief_container = document.createElement("div")
+        brief_container.className = "brief_container";
+
+        let brief = document.createElement("b")
+        brief.className = "project_brief";
+        brief.innerText = card.brief;
+        brief_container.appendChild(brief);
+
+        html.appendChild(brief_container);
+
+        document.getElementById("projects").appendChild(html);
       }
-    }
+    }).then(() => { // event listeners
+      for (element of document.getElementsByClassName("see-project-details"))
+      {
+        element.addEventListener("click", (event) => {
+          fetch(`/project-info/${event.srcElement.parentElement.id}.html`).then(res => res.text()).then((data) => {
+            document.getElementById("project_info").innerHTML = data;
+            document.getElementById("project_info").scrollIntoView();
+          });
+        })
+      }}
+    )
   </script>
 </html>

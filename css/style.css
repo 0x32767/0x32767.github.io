@@ -1,17 +1,72 @@
+#projects {
+    margin-left: 1rem;
+}
+
 .project_card {
-    width: 100px;
-    height: 100px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    width: 20.5rem;
+    height: auto;
+    border-radius: 2%;
+    border: 1px solid black;
 }
 
 .project_thumbnail {
-    width: 80px;
+    width: 15rem;
     height: auto;
+    margin-left: 2.5rem;
+    padding: 1px;
+}
+
+.project_thumbnail:hover {
+    transition: 0s;
+    border: 1px solid black;
+    padding: 0;
 }
 
 .see-project-details {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 2.5rem;
 }
 
 .see-project-details:hover {
     cursor: grab;
+    text-decoration-line: underline;
+}
+
+.project_brief {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.brief_container {
+    overflow: hidden;
+    height: 5rem;
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.project_title {
+    margin: 0;
+    margin-left: 2.5rem;
+    position: relative;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+}
+
+#project_info {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+}
+
+.project_info_hdr {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#project_info p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
 }

@@ -1,0 +1,17 @@
+.project_card {
+    width: 100px;
+    height: 100px;
+}
+
+.project_thumbnail {
+    width: 80px;
+    height: auto;
+}
+
+.see-project-details {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.see-project-details:hover {
+    cursor: grab;
+}

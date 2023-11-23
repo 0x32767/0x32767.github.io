@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GIN</title>
+    <title>[[Reisen]] On github</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-  Hello world
+    <h1>[[Reisen]]</h1>
+    <p>
+      Hello I am [[reisen]], I am a programmer; I do things like:
+      <ul>
+        <li>General programming</li>
+        <li>Reverse engineering</li>
+        <li>Language developement</li>
+        <li>Ethical hacking</li>
+      </ul>
+    </p>
+    <hr>
+    <h2>My projects</h2>
+    <div id="projects">
+      <div class="project_card" id="0">
+        <h3>Discord bot</h3>
+        <br>
+        <a href="https://github.com/0x32767/0x102-discord-bot">Click here!</a>
+        <br>
+        <img src="assets/discord.png" alt="discord logo" class="project_thumbnail">
+        <br>
+        <b class="see-project-details">More details</b>
+      </div>
+    </div>
+    <div id="project-info"></div>
   </body>
+  <script>
+    function createCORSRequest(method, url){
+        var xhr = new XMLHttpRequest();
+        if ("withCredentials" in xhr){
+            xhr.open(method, url, true);
+        } else if (typeof XDomainRequest != "undefined"){
+            xhr = new XDomainRequest();
+            xhr.open(method, url);
+        } else {
+            xhr = null;
+        }
+        return xhr;
+    }
+
+    for (element of document.getElementsByClassName("see-project-details"))
+    {
+      element.onclick = (event) => {
+        let req = createCORSRequest("GET", "projects-info/"+event.target.parentElement.id+".json");
+
+        req.onload = () => {}
+      }
+    }
+  </script>
 </html>

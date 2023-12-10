@@ -6,21 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <h1>[[Reisen]]</h1>
-    <p>
-      Hello I am [[reisen]], I am a programmer; I do things like:
-      <ul>
-        <li>General programming</li>
-        <li>Reverse engineering</li>
-        <li>Language developement</li>
-        <li>Ethical hacking</li>
-      </ul>
-    </p>
-    <hr>
-    <div id="projects"></div>
-    <hr>
-    <div id="project_info"></div>
+  <body style="margin-left: 0; margin-top: 0;">
+    <header id="top_bar">
+      <div id="m1" class="top_bar_option top_bar_selected">Project about</div>
+      <div id="m2" class="top_bar_option">About me</div>
+      <div id="m3" class="top_bar_option">Usefull stuff</div>
+      <hr style="margin-left: 1rem; margin-right: 1rem; margin-top: 0; margin-bottom: 0;">
+      <div>[[Reisen]]</div>
+      <img src="https://avatars.githubusercontent.com/u/95779166?v=4" width="32" height="32" style="padding-left: 1rem; padding-top: 1px; padding-bottom: 1px;" alt="">
+    </header>
+
+    <div style="margin: 8px;" id="project-about">
+      <br>
+      <!-- bc1qexs0s7s9jgmr54cdsjlls6wcll4lysf64q5kr4 -->
+      <h1>[[Reisen]]</h1>
+      <p>
+        Hello I am [[reisen]], I am a programmer; I do things like:
+        <ul>
+          <li>General programming</li>
+          <li>Reverse engineering</li>
+          <li>Language developement</li>
+          <li>Ethical hacking</li>
+        </ul>
+      </p>
+      <hr>
+      <div id="projects"></div>
+      <hr>
+      <div id="project_info"></div>
+    </div>
+
+    <div style="margin: 8px; display: none;" id="about-me">
+      <br><br>
+      <h1>More about me</h1>
+      <p style="font: 100;" class="about_me_text">
+        Hello, I am [[Reisen]] I am currentley a CS student and on github. I am verry good at general programming, along with a fair bit of experience with ethical hacking and reverse engeneering.
+        I am most comfortable with python, but do want to try out rust, C and zig, along with something functional like elixr. I have the most experience working on medium sized projects, such as
+        my own programming language that compiled to python byte code. I also have a substantial grasp of OOP and know how to implement good, robust and simple code/classes.
+      </p>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0x32767&layout=compact">
+      <h2>My experience with web dev</h2>
+      <p>
+        I can make fairly decent websites, as you can probably tell. However, I don't use java script or type script frameworks, this entire website was made with vanila java script. As far as back
+        end goes, for quick websites I to use PHP because I am fairly productive with it. As far as js and ts frameworks go, I don't plan on using them for personal projects, mostly because they can
+        feel clunkey to use and tend to be bloated (looking at you react).
+      </p>
+      <h2>General programming skills</h2>
+      <p>
+        I have a good grasp of OOP in adition to functional concepts. I am good at designing OOP interfaces that are intuative and efficient to use. Although my main language is python, I am
+        generally aware of most curley braced languages.
+      </p>
+    </div>
+
+    <div style="margin: 8px; display: none;" id="usefull-stuff">
+    </div>
+
   </body>
   <script>
     fetch("projects.json").then(dat => dat.json()).then((data) => { // create cards
@@ -81,5 +120,26 @@
         })
       }}
     )
+
+    for(let option of document.getElementsByClassName("top_bar_option")) {
+      option.addEventListener("click", () => {
+        for(let el of document.getElementsByClassName("top_bar_option"))
+          el.classList.remove("top_bar_selected");
+
+          option.classList.add("top_bar_selected");
+      });
+    }
+
+    function show_hide(show, hide) {
+      for (let e of hide)
+        document.getElementById(e).style.display = "none";
+
+      document.getElementById(show).style.display = "";
+    }
+
+    document.getElementById('m1').addEventListener("click", () => {show_hide('project-about', ['about-me', 'usefull-stuff'])});
+    document.getElementById('m2').addEventListener("click", () => {show_hide('about-me', ['project-about', 'usefull-stuff'])});
+    document.getElementById('m3').addEventListener("click", () => {show_hide('usefull-stuff', ['project-about', 'about-me'])});
+
   </script>
 </html>

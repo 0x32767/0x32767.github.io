@@ -29,10 +29,9 @@
         "img": "https://avatars.githubusercontent.com/u/138796053?s=1048",
         "tags": [
             "py",
-            "LLVM",
             "compiler"
         ],
-        "brief": "Custom programming language that will use the LLVM toolchain to compile to a native executable.",
+        "brief": "Custom programming language that will use a JIT compiler with the LLVM toolchain.",
         "url": "https://github.com/Goof-Labs/hanual",
         "id": "2"
     },
@@ -41,11 +40,11 @@
         "img": "https://avatars.githubusercontent.com/u/138796053?s=1048",
         "tags": [
             "py",
-            "LLVM",
-            "compiler"
+            "P2P",
+            "E2EE"
         ],
-        "brief": "Custom programming language that will use the LLVM toolchain to compile to a native executable.",
-        "url": "https://github.com/Goof-Labs/hanual",
-        "id": "2"
+        "brief": "P2P E2EE messanger made with a custom programming language and sockets. Made to be as secure as possible.",
+        "url": "https://github.com/Goof-Labs/Y",
+        "id": "3"
     }
 ]

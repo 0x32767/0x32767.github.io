@@ -111,3 +111,51 @@
 .about_me_text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.collapse_box_select {
+    padding-left: 0.75rem;
+}
+
+.improved_li {
+    list-style-type: none;
+    border-left: 3px solid grey;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+
+.improved_link {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+}
+
+.improved_link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.donation_menthod_list {
+    padding-left: 1rem;
+    list-style-type: none;
+}
+
+.improved_bold {
+    color: black;
+}
+
+.header_2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#donation_text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#licence_text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

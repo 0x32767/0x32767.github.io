@@ -4,7 +4,7 @@
     <title>[[Reisen]] On github</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://0x32767.github.io/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body style="margin-left: 0; margin-top: 0;">
     <header id="top_bar">
@@ -57,7 +57,59 @@
       </p>
     </div>
 
-    <div style="margin: 8px; display: none;" id="usefull-stuff">
+    <div style="display: none; margin: 8px;" id="usefull-stuff">
+      <br><br>
+
+      <h2 class="header_2">For CS students</h2>
+      <div class="collapse_box">
+        <ul class="collapse_box_select">
+          <li class="improved_li"><a class="improved_link" href="/resources/gcse-cheat-sheet.pdf">CS GCSE cheat sheet</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/a-level-cheat-sheet.pdf">CS A-Level cheat sheet</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/debugging-cheat-sheet.pdf">CS Debugging tips</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/code-quality.pdg">Improve code quality</a></li>
+        </ul>
+        <ul class="collapse_box_select">
+          <li class="improved_li"><a class="improved_link" href="/resources/moc-paper.pdf">Simple questions</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/moc-paper.pdf">Medium questions</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/moc-paper.pdf">Hard questions</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/moc-paper.pdf">end of paper questions</a></li>
+        </ul>
+      </div>
+      <br>
+      
+      <h2 class="header_2">CS programming problems</h2>
+      <div class="collapse_box">
+        <ul class="collapse_box_select">
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-easy.pdf">EZ problems</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-beginner.pdf">Beginner problems</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-intermediate.pdf">Intermediate problems</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-hard.pdf">Hard problems</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-expert.pdf">Expert problems</a></li>
+          <li class="improved_li"><a class="improved_link" href="/resources/problems-beond-expert.pdf">More than expert problems</a></li>
+        </ul>
+      </div>
+
+      <h2 class="header_2">Donations</h2>
+      <p id="donation_text">
+        Hello all! If you have found the resources usefull do concider donating! I hope that you
+        have found the resources usefull in your studdies and that you got the grade you wanted
+        or will get. However, if you would like to see a few more of these sheets and or resources
+        being made feel free to reach out to me via email or donate with some bitcoin. Thank you!
+        <ul class="donation_menthod_list">
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email : <b class="improved_bold">r29621136@gmail.com</b></li>
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Discord : <a class="improved_link" href="https://discordapp.com/users/827181645672480798/">[[Reisen]]</a></li>
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Bitcoin wallet : <b class="improved_bold">bc1qexs0s7s9jgmr54cdsjlls6wcll4lysf64q5kr4</b></li>
+        </ul>
+      </p>
+
+      <h2 class="header_2">Resources licence</h2>
+      <p id="licence_text">
+        All resources linked to this licence are free of charge. For individual actors, such as
+        teachers (people who have an intention to educate) and students you may use the provided
+        resource as you please. However, if the actor has an intenstion to include the work in
+        their own (including: full questions, parts of papers and parts of cheatsheats), please
+        provide a link of some description to this page.
+      </p>
     </div>
 
   </body>
@@ -140,6 +192,5 @@
     document.getElementById('m1').addEventListener("click", () => {show_hide('project-about', ['about-me', 'usefull-stuff'])});
     document.getElementById('m2').addEventListener("click", () => {show_hide('about-me', ['project-about', 'usefull-stuff'])});
     document.getElementById('m3').addEventListener("click", () => {show_hide('usefull-stuff', ['project-about', 'about-me'])});
-
   </script>
 </html>

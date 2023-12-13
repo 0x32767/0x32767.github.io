@@ -11,9 +11,10 @@
       <div id="m1" class="top_bar_option top_bar_selected">Project about</div>
       <div id="m2" class="top_bar_option">About me</div>
       <div id="m3" class="top_bar_option">Usefull stuff</div>
+      <div id="m4" class="top_bar_option">Hire me</div>
       <hr style="margin-left: 1rem; margin-right: 1rem; margin-top: 0; margin-bottom: 0;">
       <div>[[Reisen]]</div>
-      <img src="https://avatars.githubusercontent.com/u/95779166?v=4" width="32" height="32" style="padding-left: 1rem; padding-top: 1px; padding-bottom: 1px;" alt="">
+      <img width="32" height="32" style="padding-left: 1rem; padding-top: 1px; padding-bottom: 1px;" src="/img/pfp.png" />
     </header>
 
     <div style="margin: 8px;" id="project-about">
@@ -45,13 +46,13 @@
       </p>
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0x32767&layout=compact">
       <h2>My experience with web dev</h2>
-      <p>
+      <p class="about_me_text">
         I can make fairly decent websites, as you can probably tell. However, I don't use java script or type script frameworks, this entire website was made with vanila java script. As far as back
         end goes, for quick websites I to use PHP because I am fairly productive with it. As far as js and ts frameworks go, I don't plan on using them for personal projects, mostly because they can
         feel clunkey to use and tend to be bloated (looking at you react).
       </p>
       <h2>General programming skills</h2>
-      <p>
+      <p class="about_me_text">
         I have a good grasp of OOP in adition to functional concepts. I am good at designing OOP interfaces that are intuative and efficient to use. Although my main language is python, I am
         generally aware of most curley braced languages.
       </p>
@@ -110,8 +111,26 @@
         their own (including: full questions, parts of papers and parts of cheatsheats), please
         provide a link of some description to this page.
       </p>
+
+      <hr>
+
+      <h2 class="header_2">FAQ</h2>
+
+      <h3 class="faq_question">What's with the profile picture?</h3>
+      <p class="faq_answer">
+        The profile picture is Reisen Udongein Inaba, my favourite character from Tou Hou project. The image in particular is an illustration from Bohemian Archive in Japanese Red.
+      </p>
+
+      <h3 class="faq_question">What's my opinion of ChatGPT and do I use it?</h3>
+      <p class="faq_answer">
+        The short answer is no. I am not a big fan of ChatGPT and it's influence on programming. I still write all my code by hand with help from stack overflow. The reason being is
+        that I prefer to know exactley what the code is doing and why it is doing it, ChatGPT feels like an unncessery layer of abstraction that separates you from the code.
+      </p>
     </div>
 
+    <div style="display: none; margin: 8px;" id="hire-me">
+      <br>
+      <br>
   </body>
   <script>
     fetch("projects.json").then(dat => dat.json()).then((data) => { // create cards
@@ -189,8 +208,9 @@
       document.getElementById(show).style.display = "";
     }
 
-    document.getElementById('m1').addEventListener("click", () => {show_hide('project-about', ['about-me', 'usefull-stuff'])});
-    document.getElementById('m2').addEventListener("click", () => {show_hide('about-me', ['project-about', 'usefull-stuff'])});
-    document.getElementById('m3').addEventListener("click", () => {show_hide('usefull-stuff', ['project-about', 'about-me'])});
+    document.getElementById('m1').addEventListener("click", () => {show_hide('project-about', ['about-me', 'usefull-stuff', 'hire-me'])});
+    document.getElementById('m2').addEventListener("click", () => {show_hide('about-me', ['project-about', 'usefull-stuff', 'hire-me'])});
+    document.getElementById('m3').addEventListener("click", () => {show_hide('usefull-stuff', ['project-about', 'about-me', 'hire-me'])});
+    document.getElementById('m4').addEventListener("click", () => {show_hide('hire-me', ['project-about', 'about-me', 'hire-me'])});
   </script>
 </html>

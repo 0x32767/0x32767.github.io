@@ -1,3 +1,21 @@
+@keyframes rgb {
+    from {
+        border: 1px solid #6666ff;
+    }
+    10% {
+        border: 1px solid #0099ff;
+    }
+    50% {
+        border: 1px solid #00ff00;
+    }
+    75% {
+        border: 1px solid #ff3399;
+    }
+    100% {
+        border: 1px solid #6666ff;
+    }
+}
+
 #projects {
     margin-left: 1rem;
 }
@@ -158,4 +176,23 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-description {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: large;
+}
+
+.service-description {
+    animation: rgb 2.5s linear infinite;
+    margin-left: 2rem;
+    display: inline-block;
+    height: auto;
+    padding: 5px;
+}
+
+hr {
+    animation: rgb 2.5s linear infinite;
 }

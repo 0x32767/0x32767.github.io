@@ -12,7 +12,7 @@
       <div id="m2" class="top_bar_option">About me</div>
       <div id="m3" class="top_bar_option">Usefull stuff</div>
       <div id="m4" class="top_bar_option">Hire me</div>
-      <hr style="margin-left: 1rem; margin-right: 1rem; margin-top: 0; margin-bottom: 0;">
+      <hr style="margin-left: 1rem; margin-right: 1rem; margin-top: 0; margin-bottom: 0; animation: none;">
       <div>[[Reisen]]</div>
       <img width="32" height="32" style="padding-left: 1rem; padding-top: 1px; padding-bottom: 1px;" src="/img/pfp.png" />
     </header>
@@ -131,6 +131,55 @@
     <div style="display: none; margin: 8px;" id="hire-me">
       <br>
       <br>
+      <br>
+      <div class="hire-me-text">
+        Hello, I can provide a variaty of services such. I am better suited for python, CSS, HTML, TypeScript and JavaScript developement, projects and bug fixes.
+      </div>
+      <div>
+        <div class="service-card">
+          <h2 class="header_2">Code Refacroting</h2>
+          <div class="service-description">
+            I am a big fan of clean code and well-built APIs and interfaces. As such, I offer a service where I can refactor a medium sized (arround 5,000 lines
+            of code) project. I am good at implementing intuitive interfaces, functions and classes to make the project more maintainible. For non-programmers,
+            the biggest benefit of this service is potentially faster and more up-to-date code, this also includes Security fixes. This service will depend on your
+            code base size and complexity, that said, prices start at $10 and for a medium sized project the cost $50.
+          </div>
+        </div>
+        <div class="service-card">
+          <h2 class="header_2">Project Creation</h2>
+          <div class="service-description">
+            I offer mainly website creation and modification, such as changing the style of a website, how it works. Case and point, I made this website from
+            scratch with no majour tooling. Simple websites (such a the one you are on) will only cost arround $10, but more complex projects will cost more
+            (maximum of $100).
+          </div>
+        </div>
+        <div class="service-card">
+          <h2 class="header_2">Computer Science Resources</h2>
+          <div class="service-description">
+            As discussed in my 'Usefull Stuff', I have made a number of resorces geared towards CS students, such as: cheat sheets, practice papers and practice
+            questions. For teachers/educators I can create almost anything, from test-papers to power-point slides. I also garentee that none of the questions
+            have been coppied or duplicated from any internet sources/media. As for licencing, all my work is under the licence specified in the 'Usefull Stuff'.
+            As far as pricing goes, it depends on the resource requirements, if resources need to have mark schemes/answers or adhear to part of a spec, the
+            resource will require more time to make, as such will cost more. I will also make the work publically availible after a period of time (which you may
+            choose).
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <h2 class="header_2">General Advice</h2>
+        <div class="service-description">
+          Hello, just as a side note, please be specific in what you want from me, the more infomation provided the easier is for me to create something that suits
+          your requirements.
+        </div>
+      </div>
+      <div>
+        <h2 class="header_2">Contact</h2>
+        <ul class="donation_menthod_list">
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email : <b class="improved_bold">r29621136@gmail.com</b></li>
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Discord : <a class="improved_link" href="https://discordapp.com/users/827181645672480798/">[[Reisen]]</a></li>
+          <li class="improved_li" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Bitcoin wallet : <b class="improved_bold">bc1qexs0s7s9jgmr54cdsjlls6wcll4lysf64q5kr4</b></li>
+        </ul>
+      </div>
   </body>
   <script>
     fetch("projects.json").then(dat => dat.json()).then((data) => { // create cards
@@ -211,6 +260,6 @@
     document.getElementById('m1').addEventListener("click", () => {show_hide('project-about', ['about-me', 'usefull-stuff', 'hire-me'])});
     document.getElementById('m2').addEventListener("click", () => {show_hide('about-me', ['project-about', 'usefull-stuff', 'hire-me'])});
     document.getElementById('m3').addEventListener("click", () => {show_hide('usefull-stuff', ['project-about', 'about-me', 'hire-me'])});
-    document.getElementById('m4').addEventListener("click", () => {show_hide('hire-me', ['project-about', 'about-me', 'hire-me'])});
+    document.getElementById('m4').addEventListener("click", () => {show_hide('hire-me', ['project-about', 'about-me', 'usefull-stuff'])});
   </script>
 </html>

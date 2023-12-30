@@ -89,6 +89,10 @@
     font-size: x-large;
 }
 
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #top_bar {
     padding-top: 0.7rem;
     margin-top: -10px;

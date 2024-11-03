@@ -7,7 +7,7 @@
     backdrop-filter: brightness(0.3) blur(4px);
     margin: 0px;
     background-attachment: fixed;*/
-    background-color: #070F2B;
+    background-color: #1a191d;
 }
 
 #app {
@@ -17,15 +17,15 @@
 }
 
 .section {
-    border: 1px solid white;
+    border: 1px solid orangered;
     padding: 10px;
     margin-bottom: 1rem;
 }
 
 .top-bar-item {
     text-decoration: none;
-    color: #B6BBC4;
-    font-size: x-large;
+    color: yellow;
+    font-size: xx-large;
 }
 
 .text-section {
@@ -36,9 +36,9 @@
     font-size: 20px;
 }
 
-h1, h2{
+h1, h2, h3 {
     margin-top: 5px;
-    color: #B6BBC4;
+    color: yellow;
 }
 
 ul {
@@ -52,4 +52,26 @@ li {
 a {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #F0ECE5;
+}
+
+.repo {
+    padding: 5px;
+    border: 1px solid white;
+    margin-bottom: 5px;
+}
+
+.repo:hover {
+    cursor: pointer;
+}
+
+.lang, .star_label {
+    color: white;
+}
+
+.description {
+    color: green;
+}
+
+.blog-entery {
+    color: aqua;
 }

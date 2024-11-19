@@ -3,10 +3,6 @@
 }
 
 #body {
-    /* background-image: url("imgs/bg.png");
-    backdrop-filter: brightness(0.3) blur(4px);
-    margin: 0px;
-    background-attachment: fixed;*/
     background-color: #1a191d;
 }
 
@@ -29,8 +25,7 @@
 }
 
 .text-section {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #F0ECE5;
+    color: white;
     border-left: 4px;
     padding-left: 1rem;
     font-size: 20px;
@@ -46,12 +41,15 @@ ul {
 }
 
 li {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkgray;
+}
+
+li::marker {
+    color: darkmagenta;
 }
 
 a {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #F0ECE5;
+    color: white;
 }
 
 .repo {
@@ -73,5 +71,13 @@ a {
 }
 
 .blog-entery {
-    color: aqua;
+    color: lightgrey;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 10;
+}
+
+.blog-date {
+    color: darkorchid;
+    font-size: large;
+    font-weight: bolder;
 }

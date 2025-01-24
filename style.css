@@ -1,83 +1,48 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
+    font-size: x-large;
 }
 
-#body {
-    background-color: #1a191d;
-}
-
-#app {
-    margin-left: 25rem;
-    margin-right: 25rem;
-    padding-top: 1rem;
-}
-
-.section {
-    border: 1px solid orangered;
-    padding: 10px;
-    margin-bottom: 1rem;
-}
-
-.top-bar-item {
-    text-decoration: none;
+h2 {
     color: yellow;
-    font-size: xx-large;
-}
-
-.text-section {
-    color: white;
-    border-left: 4px;
-    padding-left: 1rem;
-    font-size: 20px;
-}
-
-h1, h2, h3 {
-    margin-top: 5px;
-    color: yellow;
-}
-
-ul {
-    list-style-type: "> ";
-}
-
-li {
-    color: darkgray;
-}
-
-li::marker {
-    color: darkmagenta;
 }
 
 a {
+    color: inherit;
+}
+
+.section {
+    border: 4px solid darkviolet;
+    box-shadow: 5px 5px 2px 1px rgba(182, 15, 182, 0.2);
+    padding: 1rem;
     color: white;
 }
 
-.repo {
-    padding: 5px;
+#body {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    background-color: #1a191d;
+}
+
+#greeting {
+    color: yellow;
+    padding: 1rem;
     border: 1px solid white;
-    margin-bottom: 5px;
+    font-size: xxx-large;
 }
 
-.repo:hover {
-    cursor: pointer;
+ul {
+    list-style-type: circle;
 }
 
-.lang, .star_label {
-    color: white;
+li::marker {
+    color: yellow;
 }
 
-.description {
-    color: green;
+table, th, td {
+    border: 1px solid grey;
 }
 
-.blog-entery {
-    color: lightgrey;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 10;
-}
-
-.blog-date {
-    color: darkorchid;
-    font-size: large;
-    font-weight: bolder;
+tr {
+    height: 2rem;
 }

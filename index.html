@@ -113,6 +113,59 @@
             </div>
         </div>
     </div>
+    <script>
+        var active = false;
+        var observer = new MutationObserver(function(mut){
+            mut.forEach(function(mutation){
+                mutation.removedNodes.forEach(function(removed){
+                    if (removed.id == "stop") {
+                        document.getElementById("btn").hidden = true;
+
+                        if (!confirm("Do you want to press the button?")) return;
+                        if (!confirm("Are you sure you want to press the button?")) return;
+                        if (!confirm("I didn't hear you, do you want to press the button?")) return;
+                        if (confirm("You don't want to press the button?")) return;
+                        if (!confirm("Where is the button?")) return;
+                        alert("No problem, got it, you want to press the button")
+                        if (!confirm("Just one question, are you worthy of pressing it?")) return;
+                        alert("Please answer the following questions")
+                        if (confirm("What does this question taste like?")) return;
+                        if (prompt("How many sides does a hexacontaenneagon have?")!="69") return;
+                        if (!prompt("What's your favorite periodic table element?")) return;
+                        alert("Wonderful!")
+                        alert("I am going to let you press the button")
+                        alert("just")
+                        alert("one")
+                        alert("more")
+                        alert("thing")
+                        alert("you may want to press the button")
+                        alert("but I don't want it to be pressed")
+                        alert("so no I'm not going to let you press it")
+                        alert("until")
+                        alert("You anser the final question")
+                        prompt("What's your credit card number?\nSorry it's a pay to win service >:)")
+                        alert("okay")
+                        alert("I admit defeat")
+                        alert("you win")
+                        alert("you can press the button")
+                        alert("just promise me you'll do it once")
+                        alert("just once")
+                        alert("pinky promise")
+                        alert("I promise not to bother you with these popups again")
+                        alert("pinky promise")
+                        alert("great!")
+                        alert("thank you")
+                        alert("I look forward to taking your credit card info again!")
+                        alert("great!")
+                        alert("thank you")
+                        alert("bye!")
+                        alert("JK INSPECT ELEMENT IS CHEATING! IM NOT LETTING YOU PRESS IT!!!!!!!")
+                    }
+                })
+            })
+        })
+        observer.observe(document.body, {childList: true, subtree: true})
+    </script>
     <style>
         #stop {
             position: absolute;

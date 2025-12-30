@@ -27,18 +27,21 @@
         <hr>
         <div>
             <div style="display: block; float: right;">
-                <img src="imgs/pfp.jpg"
-                    style="display: block; float:right; width: 15rem; padding: 5px; margin-right: 7rem; font-size: 20px">
+                <img src="imgs/pfp.jpg" id="main-pfp">
                 <div style="font-size: 30px">
                     Hai~
                     <br>
                     I am a computer science student based in <em>Europe</em>, I daily drive <em>Arch</em> and use <em>Qtile</em>
                     as my window manager. I usually write stuff in <em>Python</em> or <em>C</em> using <em>helix</em>. I am
-                    learning <em>rust</em>, and intend to go into embedded systems.
+                    learning <em>rust</em>, and intend to go into embedded systems or cyber security.
                     <br>
                     I use a thinkpad L440 as my flagship workstation.
                 </div>
             </div>
+        </div>
+        <hr>
+        <div>
+            <p id="quote"></p>
         </div>
         <hr>
         <h2>Contact</h2>
@@ -164,6 +167,8 @@
             I have also made some aesthetic modifications to the laptop:
             <ul>
                 <li>Stickers</li>
+                <li>(Software) <a href="imgs/enterprise.png">Wallpaper</a></li>
+                <li>(Software) Custom Qtile config</li>
             </ul>
         </p>
         <h2>People Buttons</h2>
@@ -192,8 +197,42 @@
                 frameborder="0"></iframe>
             <br>
         </p>
+        <img src="imgs/enterprise-chibi-left.png" id="mouse" onerror="this.remove()">
     </div>
     <style>
+        .content-creator-list {
+            border: 1px solid #C0C0C0;
+            display: inline-block;
+            padding: 5px;
+        }
+        #quote {
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            font-style: italic;
+            min-height: 5rem;
+        }
+        #quote:hover {
+            cursor: pointer;
+        }
+        #mouse {
+            position: absolute;
+            width: 35px;
+            animation: mouse-wobble 1s infinite;
+            animation-timing-function: ease-in;
+            transform: scaleX(1);
+        }
+        @keyframes mouse-wobble {
+            0% {
+                transform: rotate(5deg);
+            }
+            50% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(5deg);
+            }
+        }
         #loading-box {
             position: absolute;
             top: 50%;
@@ -219,16 +258,37 @@
 
         #main {
             background-color: #101010;
-            margin-left: 15rem;
-            margin-right: 15rem;
             margin-top: 3rem;
             padding: 10px;
-            border: 1px solid red;
+            border: 1px solid #FFD700;
+        }
+        @media (min-width: 1000px) {
+            #main {
+                margin-left: 15rem;
+                margin-right: 15rem;
+            }
+        }
+        #main-pfp {
+            display: block;
+            float:right;
+            width: 15rem;
+            padding: 5px;
+            margin-right: 5rem;
+            font-size: 20px;
+        }
+        @media (max-width: 445px){
+            #main-pfp{
+                float: none;
+                width: 90% !important;
+            }
+        }
+        h1, h2, h3 {
+            color: white;
         }
 
         body {
             background-color: black;
-            color: white;
+            color: #C0C0C0;
             font-family: 'Courier New', Courier, monospace;
         }
 
@@ -237,7 +297,7 @@
         }
 
         a {
-            color: yellow;
+            color: #D0D0D0;
         }
 
         .blink_text {
@@ -266,6 +326,8 @@
         document.getElementById("main").hidden = true;
         document.getElementById("loading-box").hidden = false;
 
+        var target_x = 0, target_y = 0, current_x = 0, current_y=0, speed=0.001, positions = Array();
+
         function update_percent() {
             let percent = parseInt(document.getElementById("loading-percent").innerText.replace("%", ""));
             percent = percent + Math.abs(Math.random()) * 5
@@ -279,6 +341,10 @@
                     document.getElementById("loading-box").hidden = true;
                     document.getElementById("main").hidden = false;
                 }, 1000)
+
+                add_mouse_event();
+                add_quote();
+
                 return
             }
             else {
@@ -287,6 +353,61 @@
             }
         }
         update_percent()
+        
+        function add_mouse_event() {
+            document.addEventListener("mousemove", function(event){
+                if (event.pageX > current_x) {
+                    document.getElementById("mouse").src = 'imgs/enterprise-chibi-right.png'
+                } else {
+                    document.getElementById("mouse").src = 'imgs/enterprise-chibi-left.png'
+                }
+                target_x = event.pageX;
+                target_y = event.pageY;
+
+                setTimeout(fun, 1000),
+                console.log(speed)
+            })
+        }
+
+        function fun() {
+            if (Math.abs(target_x-current_x) < 10 && Math.abs(target_y-current_y) < 10) return;
+
+            current_x += (target_x - current_x)*speed;
+            current_y += (target_y - current_y)*speed;
+            document.getElementById("mouse").style.left = `${current_x}px`;
+            document.getElementById("mouse").style.top = `${current_y}px`;
+
+            setTimeout(fun, 10)
+        }
+
+        function add_quote(){
+            let quotes = ["Humans are allergic to change. They love to say, `We've always done it this way.` I try to fight that. That's why I have a clock on my wall that runs counterclockwise - Grace Hopper",
+            "Computers are incredibly fast, accurate and stupid. Human beings are incredibly slow, inaccurate and brilliant. Together they are powerful beyond imagination. - Albert Einstein(ium)",
+            "Anyone who thinks that [number of lines of code written per day] is a valid metric is too stupid to work at a tech company - Linus Torvalds",
+            "A good programmer is someone who always looks both ways before crossing a one-way street. - Doug Linder",
+            "The difference between stupidity and genius is that genius has it's limits - Einstein",
+            "|Meow~〉 + |...〉 - Schrödinger's cat",
+            "The original question, 'Can machines think?' I believe to be too meaningless to deserve discussion. - Alan Turing",
+            "Of course I'm good at maths it's my middle name - Alan Matheson Turing (not genuine quote, but I bet he said did)",
+            "� - Unicode",
+            "□ - Also Unicode",
+            "R��m�k2�x�=6&&6=;++*%5%�n3���������h��6�4��}���j�oJQN�T��Q�f����L���� - Binary file formats",
+            "ELF - Elf Files",
+            "Not only ... but also ... - AI",
+            "POV: Linkedin posts; Me: Oh ... Em-Dashes everywhere",
+            "Naruto Running - The US Army Power Point (Area 51 Raid)",
+            "There are only three things that attract in the universe: Gravity, Magnets and Love - My Physics Teacher",
+            "Do you take physics - Literally everyone",
+            "My IQ could be measured with a pH strip - Kenadian",
+            "ᒲ╎リᒷᓵ∷ᔑ⎓ℸ ̣ ᒷリᓵ⍑ᔑリℸ ̣╎リ⊣ ℸ ̣ᔑʖꖎᒷ - Bayerisch"];
+
+            document.getElementById("quote").innerText = quotes[Math.round([Math.random()*(quotes.length-1)])]
+        }
+        document.getElementById("quote").addEventListener("click", function(event){
+            event.preventDefault();
+
+            add_quote()
+        })
     </script>
 </body>
 

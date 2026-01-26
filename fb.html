@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" hidden>
+        <div class="window" id="terminal" window_id="terminal" style="left: 20rem; top: 16rem;">
+            <div class="window-top" window_id="terminal">
+                <span window_id="terminal">Terminal</span>
+                <span class="window-options" window_id="terminal">[X]</span>
+            </div>
+            <div class="window-main">
+                <pre id="term-text">
+      /\        ⟨⟨reirei@archlinux⟩⟩
+     /  \       ==================
+    /    \      i use arch btw
+   /      \     learning c and rust
+  /   ,,   \    verbose in casual discourse
+ /   |  |   \   won't go outside
+/_-''    ''-_\  i use qtile btw
+                me ∉ { normal humans }
+
+「guest@arch-linux ~」$ ls</pre>
+                <div id="terminal-cmd-result">
+                    <details>
+                        <summary>likes</summary>
+                        <ul>
+                            <li>food</li>
+                            <li>head pats</li>
+                            <li>The EU</li>
+                            <li>Right to repair</li>
+                            <li><a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en">This initiative</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>dislikes</summary>
+                        <ul>
+                            <li>rap</li>
+                            <li><a href="https://www.youtube.com/watch?v=U7s_CaI93Mo">those who claim vibe coding is the future</a></li>
+                            <li>excessive doom scrollers</li>
+                            <li>anything loud (tinnitus)</li>
+                            <li>planned obsolescence</li>
+                            <li>Sam Altman (thanks for the RAM shortage!)</li>
+                            <li>Microslop (bit-locker especially)</li>
+                            <li>cold</li>
+                            <li>anything scary</li>
+                            <li>chalk (anything with that texture)</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="window" id="pfp_window" window_id="pfp_window" style="left: 70rem; top: 4rem">
+            <div class="window-top" window_id="pfp_window">
+                <span window_id="pfp_window">Important img</span>
+                <span class="window-options" window_id="pfp_window">[X]</span>
+            </div>
+            <div class="window-main">
+                <span>Sometimes I use this pfp btw</span>
+                <br>
+                <img src="imgs/pfp2.png" width="260px">
+            </div>
+        </div>
+        <div id="welcome-window" class="window" window_id="welcome-window" style="left: 50rem; top: 25rem;">
+            <div class="window-top" window_id="welcome-window">
+                <span window_id="welcome-window">HAIIIII~~~~~</span>
+                <span class="window-options" window_id="welcome-window">[X]</span>
+            </div>
+            <div class="window-main">
+                hey user~ :3
+                <br>
+                closeted femboi (if you couldn't tell).
+                welcome to my schizophrenic mess, i hope you enjoy your stay!
+                <br>
+                <br>
+                <div id="bk">
+                    <div class="row" id="row1"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-black length-7"></div><!--
+                        --><div class="pic-block color-white length-4"></div><!--
+                        --><div class="pic-block color-black length-7"></div>
+                    </div>
+                    <div class="row" id="row2"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-black length-1"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-6"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-1"></div>
+                    </div>
+                    <div class="row" id="row3"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-black length-1"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-6"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-1"></div>
+                    </div>
+                    <div class="row" id="row4"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-white length-3"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-6"></div><!--
+                        --><div class="pic-block color-black length-3"></div>
+                    </div>
+                    <div class="row" id="row5"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-white length-3"></div><!--
+                        --><div class="pic-block color-black length-3"></div><!--
+                        --><div class="pic-block color-white length-6"></div><!--
+                        --><div class="pic-block color-black length-3"></div>
+                    </div>
+                    <div class="row" id="row6"><!--
+                        --><div class="pic-block color-white length-8"></div><!--
+                        --><div class="pic-block color-black length-3"></div>
+                    </div>
+                    <div class="row" id="row7"><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-12"></div><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-red length-1"></div>
+                    </div>
+                    <div class="row" id="row8"><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-3"></div><!--
+                        --><div class="pic-block color-black length-1"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-1"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-black length-1"></div><!--
+                        --><div class="pic-block color-white length-2"></div><!--
+                        --><div class="pic-block color-red length-1"></div><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-red length-1"></div>
+                    </div>
+                    <div class="row" id="row9"><!--
+                        --><div class="pic-block color-white length-7"></div><!--
+                        --><div class="pic-block color-black length-2"></div><!--
+                        --><div class="pic-block color-white length-1"></div><!--
+                        --><div class="pic-block color-black length-2"></div>
+                    </div>
+                </div>
+                <hr>
+                <em>*flustered*</em> oh i need to introduce myself uuuuuuuuuh...
+                <em>*blushes*</em> hiii~ i'm reirei, silly computer enthusiast, programmer and
+                weeb. i use qtile + arch. i also study cs (self evident)
+                <br>
+                <em>*flustered* i don't suppose you mind if i talk like this</em>
+            </div>
+        </div>
+    </div>
+    <div class="window" id="loading_window" window_id="loading_window">
+        <div class="window-top" window_id="loading_window">
+            <span window_id="loading_window">loading...</span>
+            <span class="window-options" window_id="loading_window">[X]</span>
+        </div>
+        <div class="window-main">
+            Loading:
+            <span id="loading-percent">
+                1%
+            </span>
+            <div id="loading-bar-outer">
+                <div id="loading-bar-inner"></div>
+            </div>
+            <p>
+                <span style="color: red;">**WARNING**</span>
+                <br>
+                <span style="color: white; font-size: 15px">
+                    B*yk*sser/f*mboy incoming
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    if (prompt("PASSWORD: ")!=':3')window.location="index.html";
+
+    let windows = document.getElementsByClassName("window-top")
+    var selected_window = null;
+
+    for (let win of windows) {
+        win.onmousedown = ((ev) => {
+            selected_window = document.getElementById(ev.target.parentElement.attributes["window_id"].value);
+        });
+    }
+
+    document.addEventListener("mousemove", (ev) => {
+        ev.preventDefault()
+
+        if (selected_window == null) return;
+
+        selected_window.style.left = `${ev.clientX}px`;
+        selected_window.style.top = `${ev.clientY}px`;
+        console.log(selected_window.attributes["window_id"].value)
+    })
+
+    document.addEventListener("mouseup", () => {
+        selected_window = null;
+    })
+</script>
+<style>
+    #loading_window {
+        width: 15rem;
+        left: 40%;
+        top: 20%;
+    }
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        user-select: none;
+        background-image: linear-gradient(to bottom right, #050505 , black);
+        color: #d600ff;
+    }
+    hr {
+        border: 1px solid #200589;
+    }
+    #term-text {
+        margin-bottom: 0px;
+    }
+    #terminal-cmd-result {
+        margin-left: 10px;
+    }
+    .window {
+        border: 1px solid #7A1CAC;
+        display: inline-block;
+        position: absolute;
+        min-width: 10rem;
+        max-width: 30rem;
+        background-color: black;
+
+        /* thx https://cssbud.com/css-generator/css-glow-generator/ */
+        -webkit-box-shadow:0px 0px 6px 9px rgba(46,7,63,0.46);
+        -moz-box-shadow: 0px 0px 6px 9px rgba(46,7,63,0.46);
+        box-shadow: 0px 0px 6px 9px rgba(46,7,63,0.46);
+
+    }
+    .window-top {
+        cursor: move;
+        font-family: 'Courier New', Courier, monospace;
+        border-bottom: 1px solid #7A1CAC;
+        margin-bottom: 5px;
+        padding: 2px;
+    }
+    .window-options {
+        font-family: 'Courier New', Courier, monospace;
+        float: right;
+    }
+    .window-main {
+        padding: 5px;
+    }
+    .length-1 {
+        width: 1rem;
+        height: 1rem;
+    }
+    .length-2 {
+        width: 2rem;
+        height: 1rem;
+    }
+    .length-3 {
+        width: 3rem;
+        height: 1rem;
+    }
+    .length-4 {
+        width: 4rem;
+        height: 1rem;
+    }
+    .length-5 {
+        width: 5rem;
+        height: 1rem;
+    }
+    .length-6 {
+        width: 6rem;
+        height: 1rem;
+    }
+    .length-7 {
+        width: 7rem;
+        height: 1rem;
+    }
+    .length-8 {
+        width: 8rem;
+        height: 1rem;
+    }
+    .length-12 {
+        width: 12rem;
+        height: 1rem;
+    }
+    .color-black {
+        background-color: black;
+    }
+    .color-red {
+        animation: blush 7s !important;
+        background-color: red;
+    }
+    #bk {
+        background-color: white;
+        border: 1rem solid white;
+        padding-left: 10%; /* failed to centre div in css */
+    }
+    @keyframes blush {
+        100% {
+            background-color: red;
+        }
+        0% {
+            background-color: white;
+        }
+    }
+    .pic-block {
+        display: inline-block;
+    }
+    .pic-block:nth-child(2n) {
+        animation-delay: 2s;
+        animation: grow 1s;
+    }
+    .pic-block:nth-child(3n) {
+        animation-delay: 1.5s;
+        animation: grow 2.5s;
+    }
+    .pic-block:nth-child(4n) {
+        animation-delay: 0.5;
+        animation: grow 2.5s;
+    }
+    .row {
+        height: 1rem;
+    }
+    @keyframes grow {
+        0% {
+            opacity: 0;
+            width: 0px;
+            margin-left: 1rem;
+        }
+    }
+    ul {
+        margin: 1px;
+    }
+    #loading-bar-outer {
+        padding: 2px;
+        width: 14rem;
+        height: 1rem;
+        border: 1px solid purple;
+    }
+    #loading-bar-inner {
+        background-color: #d600ff;
+        height: 1rem;
+        width: 0%;
+    }
+</style>
+<script>
+    function update_percent() {
+        let percent = parseInt(document.getElementById("loading-percent").innerText.replace("%", ""));
+        percent = percent + Math.abs(Math.random()) * 3
+
+        if (percent > 100) {
+            //document.getElementById("loading-percent").innerText = `100%`
+
+            document.getElementById("loading-percent").innerText = `[[COMPLETE]]`
+            document.getElementById("loading-bar-inner").style.width = `100%`
+
+            setTimeout(() => {
+                document.getElementById("app").hidden = false;
+                // document.getElementById("loading").hidden = true;
+            }, 1000)
+
+            add_mouse_event();
+            add_quote();
+
+            return
+        }
+        else {
+            document.getElementById("loading-percent").innerText = `${percent.toFixed(2)}%`
+            document.getElementById("loading-bar-inner").style.width = `${percent.toFixed(2)}%`
+            setTimeout(update_percent, 75)
+
+        }
+    }
+    update_percent()
+</script>
+</html>

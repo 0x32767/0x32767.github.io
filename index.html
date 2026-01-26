@@ -185,6 +185,7 @@
         <p>
             <img src="buttons/nocookie.gif" class="button-88x31">
             <img src="buttons/archlinux.gif" class="button-88x31">
+            <img src="buttons/btwarchlinux.gif" class="button-88x31">
             <img src="buttons/gnu-linux.gif" class="button-88x31">
             <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books"><img src="buttons/anime-girls-holding-programming-books.png" class="button-88x31"></a>
             <iframe id="btn" src="//incr.easrng.net/badge?key=reirei-github-io"
@@ -192,7 +193,7 @@
                 frameborder="0"></iframe>
             <br>
         </p>
-        <img src="imgs/enterprise-chibi-left.png" id="mouse" onerror="this.remove()">
+        <img src="imgs/enterprise-chibi-left.png" id="mouse" onerror="this.remove()" hidden>
     </div>
     <style>
         .content-creator-list {
@@ -321,6 +322,8 @@
         document.getElementById("main").hidden = true;
         document.getElementById("loading-box").hidden = false;
 
+        document.getElementById("mouse").hidden = false;
+
         var target_x = 0, target_y = 0, current_x = 0, current_y=0, speed=0.001, positions = Array();
 
         function update_percent() {
@@ -359,8 +362,7 @@
                 target_x = event.pageX;
                 target_y = event.pageY;
 
-                setTimeout(fun, 1000),
-                console.log(speed)
+                setTimeout(fun, 1000)
             })
         }
 
@@ -376,26 +378,29 @@
         }
 
         function add_quote(){
-            let quotes = ["Humans are allergic to change. They love to say, `We've always done it this way.` I try to fight that. That's why I have a clock on my wall that runs counterclockwise - Grace Hopper",
-            "Computers are incredibly fast, accurate and stupid. Human beings are incredibly slow, inaccurate and brilliant. Together they are powerful beyond imagination. - Albert Einstein(ium)",
-            "Anyone who thinks that [number of lines of code written per day] is a valid metric is too stupid to work at a tech company - Linus Torvalds",
-            "A good programmer is someone who always looks both ways before crossing a one-way street. - Doug Linder",
-            "The difference between stupidity and genius is that genius has it's limits - Einstein",
-            "|Meow~〉 + |...〉 - Schrödinger's cat",
-            "The original question, 'Can machines think?' I believe to be too meaningless to deserve discussion. - Alan Turing",
-            "Of course I'm good at maths it's my middle name - Alan Matheson Turing (not genuine quote, but I bet he said did)",
-            "� - Unicode",
-            "□ - Also Unicode",
-            "R��m�k2�x�=6&&6=;++*%5%�n3���������h��6�4��}���j�oJQN�T��Q�f����L���� - Binary file formats",
-            "Not only ... but also ... - AI",
-            "POV: Linkedin posts; Me: Oh ... Em-Dashes everywhere",
-            "Naruto Running - The US Army Power Point (Area 51 Raid)",
-            "There are only three things that attract in the universe: Gravity, Magnets and Love - My Physics Teacher",
-            "Do you take physics? - Literally everyone",
-            "My IQ could be measured with a pH strip - Kenadian",
-            "ᒲ╎リᒷᓵ∷ᔑ⎓ℸ ̣ ᒷリᓵ⍑ᔑリℸ ̣╎リ⊣ ℸ ̣ᔑʖꖎᒷ - Bayerisch",
-            "An empty search history reveals more than a full one. - Sun Tzu",
-            "When I die, I swear to God I hope no one makes up fake quotes from my book. - Sun Tzu"
+            let quotes = [
+                "Humans are allergic to change. They love to say, `We've always done it this way.` I try to fight that. That's why I have a clock on my wall that runs counterclockwise - Grace Hopper",
+                "Computers are incredibly fast, accurate and stupid. Human beings are incredibly slow, inaccurate and brilliant. Together they are powerful beyond imagination. - Albert Einstein(ium)",
+                "Anyone who thinks that [number of lines of code written per day] is a valid metric is too stupid to work at a tech company - Linus Torvalds",
+                "A good programmer is someone who always looks both ways before crossing a one-way street. - Doug Linder",
+                "The difference between stupidity and genius is that genius has it's limits - Einstein",
+                "|Meow~〉 + |...〉 - Schrödinger's cat",
+                "The original question, 'Can machines think?' I believe to be too meaningless to deserve discussion. - Alan Turing",
+                "Of course I'm good at maths it's my middle name - Alan Matheson Turing (not genuine quote, but I bet he said did)",
+                "� - Unicode",
+                "□ - Also Unicode",
+                "R��m�k2�x�=6&&6=;++*%5%�n3���������h��6�4��}���j�oJQN�T��Q�f����L���� - Binary file formats",
+                "Not only ... but also ... - AI",
+                "POV: Linkedin posts; Me: Oh ... Em-Dashes everywhere",
+                "Naruto Running - The US Army Power Point (Area 51 Raid)",
+                "There are only three things that attract in the universe: Gravity, Magnets and Love - My Physics Teacher",
+                "Do you take physics? - Literally everyone",
+                "My IQ could be measured with a pH strip - Kenadian",
+                "ᒲ╎リᒷᓵ∷ᔑ⎓ℸ ̣ ᒷリᓵ⍑ᔑリℸ ̣╎リ⊣ ℸ ̣ᔑʖꖎᒷ - Bayerisch",
+                "An empty search history reveals more than a full one. - Sun Tzu",
+                "When I die, I swear to God I hope no one makes up fake quotes from my book. - Sun Tzu",
+                "Whoever reads this needs to eat more vegetables - Growlingcorn654",
+                "Also the game"
             ];
 
             document.getElementById("quote").innerText = quotes[Math.round([Math.random()*(quotes.length-1)])]

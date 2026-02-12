@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div id="app" hidden>
-        <div class="window" id="terminal" window_id="terminal" style="left: 20rem; top: 16rem;">
-            <div class="window-top" window_id="terminal">
-                <span window_id="terminal">Terminal</span>
-                <span class="window-options" window_id="terminal">[X]</span>
-            </div>
-            <div class="window-main">
-                <pre id="term-text">
+    <div class="window" id="window-example">
+        <div class="window-top">
+            <div class="window-title">Philosophy</div>
+            <div class="window-close" onclick="document.getElementById('window-example').hidden=true">[X]</div>
+        </div>
+        <div class="window-content">
+            Lorum ispum
+        </div>
+    </div>
+    <div class="window" id="terminal-window">
+        <div class="window-top">
+            <div class="window-title">Terminal</div>
+            <div class="window-close" onclick="document.getElementById('terminal-window').hidden=true">[X]</div>
+        </div>
+        <div class="window-content">
+            <pre id="term-text">
       /\        ⟨⟨reirei@archlinux⟩⟩
      /  \       ==================
     /    \      i use arch btw
@@ -24,294 +32,195 @@
                 me ∉ { normal humans }
 
 「guest@arch-linux ~」$ ls</pre>
-                <div id="terminal-cmd-result">
-                    <details>
-                        <summary>likes</summary>
-                        <ul>
-                            <li>food</li>
-                            <li>head pats</li>
-                            <li>The EU</li>
-                            <li>Right to repair</li>
-                            <li><a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en">This initiative</a></li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary>dislikes</summary>
-                        <ul>
-                            <li>rap</li>
-                            <li><a href="https://www.youtube.com/watch?v=U7s_CaI93Mo">those who claim vibe coding is the future</a></li>
-                            <li>excessive doom scrollers</li>
-                            <li>anything loud (tinnitus)</li>
-                            <li>planned obsolescence</li>
-                            <li>Sam Altman (thanks for the RAM shortage!)</li>
-                            <li>Microslop (bit-locker especially)</li>
-                            <li>cold</li>
-                            <li>anything scary</li>
-                            <li>chalk (anything with that texture)</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
+            <details>
+                <summary>likes</summary>
+                <ul>
+                    <li>food</li>
+                    <li>head pats</li>
+                    <li>The EU</li>
+                    <li>Right to repair</li>
+                    <li><a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en">This initiative</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary>dislikes</summary>
+                <ul>
+                    <li>rap</li>
+                    <li><a href="https://www.youtube.com/watch?v=U7s_CaI93Mo">those who claim vibe coding is the future</a></li>
+                    <li>excessive doom scrollers</li>
+                    <li>anything loud (tinnitus)</li>
+                    <li>planned obsolescence</li>
+                    <li>Sam Altman (thanks for the RAM shortage!)</li>
+                    <li>Microslop (bit-locker especially)</li>
+                    <li>cold</li>
+                    <li>anything scary</li>
+                    <li>chalk (anything with that texture)</li>
+                    <li>applied mathematics (statistics and kinematics especially)</li>
+                </ul>
+            </details>
         </div>
-        <div class="window" id="pfp_window" window_id="pfp_window" style="left: 70rem; top: 4rem">
-            <div class="window-top" window_id="pfp_window">
-                <span window_id="pfp_window">Important img</span>
-                <span class="window-options" window_id="pfp_window">[X]</span>
-            </div>
-            <div class="window-main">
-                <span>Sometimes I use this pfp btw</span>
-                <br>
-                <img src="imgs/pfp2.png" width="260px">
-            </div>
-        </div>
-        <div class="window" id="stories_window" window_id="stories_window" style="left: 70rem; top: 4rem">
-            <div class="window-top" window_id="stories_window">
-                <span window_id="stories_window">Hardware</span>
-                <span class="window-options" window_id="stories_window">[X]</span>
-            </div>
-            <div class="window-main">
-                <em>Oh you want to hear a story or two? erm, AH here!</em>
-                <details>
-                    <summary>The time school gave me a laptop</summary>
-                    be me
-                    in highschool
-                    school gives me microsoft laptop with windows 11
-                    look at app permissions
-                    school spyware has access to
-                    camera
-                    microphone
-                    location
-                    creaped out af
-                    boot into BIOS/EUFI
-                    disable camera and microphone
-                    reboot
-                    bitlocker.png
-                    go to microsoft website to get bitlocker recovery key
-                    recovery key not available (school hid it from me)
-                    going nuclear
-                    go through too much effort to download windows 11 ISO
-                    put ISO onto ventoy usb
-                    boot into ventoy
-                    windows 11 installer
-                    trackpad and mouse don't work
-                    boot back into ventoy
-                    arch linux installer
-                    keyboard works
-                    wifi works
-                    go back to windows 11 installer
-                    connect keyboard and mouse
-                    click through installer
-                    skip microsoft account/internet garbage
-                    boot fresh into windows 11
-                    keyboard and trackpad doesn't work
-                    finding_problem.exe
-                    microsoft windows doesn't come with drivers for microsoft laptop
-                    try to download no drivers
-                    has no internet connection
-                    checks wifi settings
-                    no connect to wifi option
-                    only options are
-                    dial up (not supported in my area)
-                    ethernet (laptop doesn't have ethernet port)
+    </div>
 
-                    moral of the story: use linux
-                </details>
-            </div>
+    <div class="window" id="welcome-window-bk">
+        <div class="window-top">
+            <div class="window-title">Welcome2!</div>
+            <div class="window-close" onclick="document.getElementById('welcome-window-bk').hidden=true">[X]</div>
         </div>
-        <div id="welcome-window" class="window" window_id="welcome-window" style="left: 50rem; top: 25rem;">
-            <div class="window-top" window_id="welcome-window">
-                <span window_id="welcome-window">HAIIIII~~~~~</span>
-                <span class="window-options" window_id="welcome-window">[X]</span>
-            </div>
-            <div class="window-main">
-                hey user~ :3
-                <br>
-                closeted femboi (if you couldn't tell).
-                welcome to my schizophrenic mess, i hope you enjoy your stay!
-                <br>
-                <br>
-                <div id="bk">
-                    <div class="row" id="row1"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-black length-7"></div><!--
-                        --><div class="pic-block color-white length-4"></div><!--
-                        --><div class="pic-block color-black length-7"></div>
-                    </div>
-                    <div class="row" id="row2"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-black length-1"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-6"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-1"></div>
-                    </div>
-                    <div class="row" id="row3"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-black length-1"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-6"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-1"></div>
-                    </div>
-                    <div class="row" id="row4"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-white length-3"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-6"></div><!--
-                        --><div class="pic-block color-black length-3"></div>
-                    </div>
-                    <div class="row" id="row5"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-white length-3"></div><!--
-                        --><div class="pic-block color-black length-3"></div><!--
-                        --><div class="pic-block color-white length-6"></div><!--
-                        --><div class="pic-block color-black length-3"></div>
-                    </div>
-                    <div class="row" id="row6"><!--
-                        --><div class="pic-block color-white length-8"></div><!--
-                        --><div class="pic-block color-black length-3"></div>
-                    </div>
-                    <div class="row" id="row7"><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-12"></div><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-red length-1"></div>
-                    </div>
-                    <div class="row" id="row8"><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-3"></div><!--
-                        --><div class="pic-block color-black length-1"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-1"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-black length-1"></div><!--
-                        --><div class="pic-block color-white length-2"></div><!--
-                        --><div class="pic-block color-red length-1"></div><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-red length-1"></div>
-                    </div>
-                    <div class="row" id="row9"><!--
-                        --><div class="pic-block color-white length-7"></div><!--
-                        --><div class="pic-block color-black length-2"></div><!--
-                        --><div class="pic-block color-white length-1"></div><!--
-                        --><div class="pic-block color-black length-2"></div>
-                    </div>
+        <div class="window-content" style="width: 30rem;">
+            Hai~<br>
+            Closeted femboi here. typical (good) computer science student and linux user based in Europe.
+            <div id="bk">
+                <div class="row" id="row1"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-black length-7"></div><!--
+                    --><div class="pic-block color-white length-4"></div><!--
+                    --><div class="pic-block color-black length-7"></div>
                 </div>
-                <hr>
-                <em>*flustered*</em> oh i need to introduce myself uuuuuuuuuh...
-                <em>*blushes*</em> hiii~ i'm reirei, silly computer enthusiast, programmer and
-                weeb. i use qtile + arch. i also study cs (self evident)
-                <br>
-                <em>*flustered* i don't suppose you mind if i talk like this</em>
+                <div class="row" id="row2"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-black length-1"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-6"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-1"></div>
+                </div>
+                <div class="row" id="row3"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-black length-1"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-6"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-1"></div>
+                </div>
+                <div class="row" id="row4"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-white length-3"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-6"></div><!--
+                    --><div class="pic-block color-black length-3"></div>
+                </div>
+                <div class="row" id="row5"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-white length-3"></div><!--
+                    --><div class="pic-block color-black length-3"></div><!--
+                    --><div class="pic-block color-white length-6"></div><!--
+                    --><div class="pic-block color-black length-3"></div>
+                </div>
+                <div class="row" id="row6"><!--
+                    --><div class="pic-block color-white length-8"></div><!--
+                    --><div class="pic-block color-black length-3"></div>
+                </div>
+                <div class="row" id="row7"><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-12"></div><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-red length-1"></div>
+                </div>
+                <div class="row" id="row8"><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-3"></div><!--
+                    --><div class="pic-block color-black length-1"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-1"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-black length-1"></div><!--
+                    --><div class="pic-block color-white length-2"></div><!--
+                    --><div class="pic-block color-red length-1"></div><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-red length-1"></div>
+                </div>
+                <div class="row" id="row9"><!--
+                    --><div class="pic-block color-white length-7"></div><!--
+                    --><div class="pic-block color-black length-2"></div><!--
+                    --><div class="pic-block color-white length-1"></div><!--
+                    --><div class="pic-block color-black length-2"></div>
+                </div>
             </div>
+            I use a <b>Syncan TK-105M</b> keyboard from 1991 (cleaned everything ofc). I own two ThinkPads (T440 and L440)
+            a dell Inspiron 17-574 (now a half-top) and my pc.
+            <br>
+            <em>this website is bet viewed at 1920x1080 resolution</em>
         </div>
     </div>
-    <div class="window" id="loading_window" window_id="loading_window">
-        <div class="window-top" window_id="loading_window">
-            <span window_id="loading_window">loading...</span>
-            <span class="window-options" window_id="loading_window">[X]</span>
-        </div>
-        <div class="window-main">
-            Loading:
-            <span id="loading-percent">
-                1%
-            </span>
-            <div id="loading-bar-outer">
-                <div id="loading-bar-inner"></div>
-            </div>
-            <p>
-                <span style="color: red;">**WARNING**</span>
-                <br>
-                <span style="color: white; font-size: 15px">
-                    B*yk*sser/f*mboy incoming
-                </span>
-            </p>
-        </div>
-    </div>
+    <nav id="navbar">
+        <ul id="navbar-list">
+            <li class="navbar-item"><button class="open-window" id="start" onclick="document.getElementById('welcome-window-bk').hidden=false">:3</button></li><li class="navbar-item"><button class="open-window" onclick="document.getElementById('window-example').hidden=false">Projects</button></li><li class="navbar-item"><button class="open-window" onclick="document.getElementById('terminal-window').hidden=false">Terminal!</button></li>
+        </ul>
+    </nav>
 </body>
-<script>
-//    if (prompt("PASSWORD: ")!=':3')window.location="index.html";
-
-    let windows = document.getElementsByClassName("window-top")
-    var selected_window = null;
-
-    for (let win of windows) {
-        win.onmousedown = ((ev) => {
-            selected_window = document.getElementById(ev.target.parentElement.attributes["window_id"].value);
-        });
-    }
-
-    document.addEventListener("mousemove", (ev) => {
-        ev.preventDefault()
-
-        if (selected_window == null) return;
-
-        selected_window.style.left = `${ev.clientX}px`;
-        selected_window.style.top = `${ev.clientY}px`;
-        console.log(selected_window.attributes["window_id"].value)
-    })
-
-    document.addEventListener("mouseup", () => {
-        selected_window = null;
-    })
-</script>
 <style>
-    #loading_window {
-        width: 15rem;
-        left: 40%;
-        top: 20%;
-    }
     * {
         font-family: 'Courier New', Courier, monospace;
+        color: white;
     }
     body {
-        user-select: none;
-        background-image: linear-gradient(to bottom right, #050505 , black);
-        color: #d600ff;
+        background-color: black;
     }
-    hr {
-        border: 1px solid #200589;
-    }
-    #term-text {
-        margin-bottom: 0px;
-    }
-    #terminal-cmd-result {
-        margin-left: 10px;
+    .window-content {
+        padding: 5px;
+        color: white;
     }
     .window {
-        border: 1px solid #7A1CAC;
-        display: inline-block;
-        position: absolute;
         min-width: 10rem;
-        max-width: 30rem;
+        min-height: 10rem;
+        max-width: 34rem;
+        border: 1px solid #d600ff;
+        position: absolute;
         background-color: black;
-
-        /* thx https://cssbud.com/css-generator/css-glow-generator/ */
-        -webkit-box-shadow:0px 0px 6px 9px rgba(46,7,63,0.46);
-        -moz-box-shadow: 0px 0px 6px 9px rgba(46,7,63,0.46);
-        box-shadow: 0px 0px 6px 9px rgba(46,7,63,0.46);
-
     }
     .window-top {
-        cursor: move;
-        font-family: 'Courier New', Courier, monospace;
-        border-bottom: 1px solid #7A1CAC;
-        margin-bottom: 5px;
-        padding: 2px;
+        height: 1.2rem;
+        border-bottom: 1px solid #d600ff;
     }
-    .window-options {
-        font-family: 'Courier New', Courier, monospace;
+    .window-top:hover {
+        cursor: move;
+    }
+    .window-close {
         float: right;
+    }
+    .window-close:hover {
+        color: red;
+        cursor: pointer;
+    }
+    .window-title {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+    #navbar {
+        overflow: hidden;
+        width: 100%;
+        background-color: black;
+        border-top: 1px solid white;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+    #navbar-list {
+        padding-left: 0px;
+        list-style: none;
+        margin: 0px;
+    }
+    .navbar-item {
+        display: inline;
+    }
+    .open-window {
+        height: 3rem;
+        width: 10rem;
+        font-size: x-large;
+        background-color: black;
+    }
+    #start {
+        width: 4rem;
     }
     .window-main {
         padding: 5px;
@@ -364,6 +273,9 @@
         border: 1rem solid white;
         padding-left: 10%; /* failed to centre div in css */
     }
+    .pic-block {
+        display: inline-block;
+    }
     @keyframes blush {
         100% {
             background-color: red;
@@ -371,9 +283,6 @@
         0% {
             background-color: white;
         }
-    }
-    .pic-block {
-        display: inline-block;
     }
     .pic-block:nth-child(2n) {
         animation-delay: 2s;
@@ -397,49 +306,41 @@
             margin-left: 1rem;
         }
     }
-    ul {
-        margin: 1px;
-    }
-    #loading-bar-outer {
-        padding: 2px;
-        width: 14rem;
-        height: 1rem;
-        border: 1px solid purple;
-    }
-    #loading-bar-inner {
-        background-color: #d600ff;
-        height: 1rem;
-        width: 0%;
+    #terminal-window {
+        width: 30rem;
     }
 </style>
 <script>
-    function update_percent() {
-        let percent = parseInt(document.getElementById("loading-percent").innerText.replace("%", ""));
-        percent = percent + Math.abs(Math.random()) * 3
+    var selected_window, offset_x, offset_y, max_z_index=0;
+    let windows = document.getElementsByClassName("window")
 
-        if (percent > 100) {
-            //document.getElementById("loading-percent").innerText = `100%`
+    for (let i = 0; i <windows.length; i++) {
+        let win = windows[i];
 
-            document.getElementById("loading-percent").innerText = `[[COMPLETE]]`
-            document.getElementById("loading-bar-inner").style.width = `100%`
+        win.children[0].addEventListener("mousedown", function(event){
+            event.preventDefault()
+            selected_window = event.target.parentNode
+            
+            if (!selected_window.classList.contains("window"))
+                selected_window = selected_window.parentNode
+            
+            max_z_index++
+            selected_window.style["z-index"] = max_z_index;
 
-            setTimeout(() => {
-                document.getElementById("app").hidden = false;
-                // document.getElementById("loading").hidden = true;
-            }, 1000)
+            offset_x = event.offsetX
+            offset_y = event.offsetY
+        })
 
-            add_mouse_event();
-            add_quote();
-
-            return
-        }
-        else {
-            document.getElementById("loading-percent").innerText = `${percent.toFixed(2)}%`
-            document.getElementById("loading-bar-inner").style.width = `${percent.toFixed(2)}%`
-            setTimeout(update_percent, 75)
-
-        }
     }
-    update_percent()
+
+    document.addEventListener("mouseup" ,function(event) {
+        selected_window = null
+    })
+
+    document.addEventListener("mousemove", function(event) {
+        if (selected_window == null) return;
+        selected_window.style.left = `${event.clientX - offset_x}px`;
+        selected_window.style.top = `${event.clientY - offset_y}px`;
+    })
 </script>
 </html>

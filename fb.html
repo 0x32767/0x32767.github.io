@@ -1,18 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="window" id="window-example">
+    <nav id="powerline">
+        <div class="section bg1"><a href="javascript:document.getElementById('welcome-window-bk').hidden = false;" class="open-window" style="color: white;">Welcome!</a>
+        </div>
+        <div class="endsection fg1 bg2"></div>
+        <div class="section bg2"><a href="javascript:document.getElementById('terminal-window').hidden = false;" class="open-window" style="color: white;">Terminal</a>
+        </div>
+        <div class="endsection fg2 bg3"></div>
+        <div class="section bg3"><a href="javascript:document.getElementById('window-netscape').hidden = false;" class="open-window" style="color: white;">Chan</a>
+        </div>
+        <div class="endsection fg3 bg4"></div>
+        <div class="section bg4"><a href="javascript:alert(1)" class="open-window" style="color: black;">Thing4</a>
+        </div>
+        <div class="endsection fg4 bg5"></div>
+        <div class="section bg5"><a href="javascript:alert(1)" class="open-window" style="color: black;">Thing5</a>
+        </div>
+        <div class="endsection fg5 bg6"></div>
+        <div class="section bg6"><a href="javascript:alert(1)" class="open-window" style="color: black;">Thing6</a>
+        </div>
+        <div class="endsection fg6 bg7"></div>
+        <div class="section marquee"
+            style="width: 1000px; border-bottom: 1px solid white; margin-right: 10px; margin-left: 10px;">
+            <span>hai~ user and welcome to my personal website. Feel free to have a look around.</span>
+        </div>
+    </nav>
+
+
+    <div class="window" id="window-netscape">
         <div class="window-top">
-            <div class="window-title">Philosophy</div>
-            <div class="window-close" onclick="document.getElementById('window-example').hidden=true">[X]</div>
+            <div class="window-title">Chan</div>
+            <div class="window-close" onclick="document.getElementById('window-netscape').hidden=true">[X]</div>
         </div>
         <div class="window-content">
-            Lorum ispum
+            <div id="netscape-window" style="background-color: #EEF2FF;">
+                <div style="margin: 10px;">
+                    <br>
+                    <div class="netscape-comment">
+                        <div class="netscape-comment-top">
+                            <input type="checkbox">
+                            <span class="name-box">Boykisser</span>
+                            <span style="color: black;">21/02/2026</span>
+                        </div>
+                        <blockquote>
+                            <img src="imgs/arch-look.JPG" width="300px">
+                            <br>
+                            I use arch btw
+                        </blockquote>
+                    </div>
+                    <div class="netscape-comment">
+                        <div class="netscape-comment-top">
+                            <input type="checkbox">
+                            <span class="name-box">Boykisser</span>
+                            <span style="color: black;">idfk</span>
+                        </div>
+                        <blockquote>
+                            wrote cheats for online homework assignments 10/10
+                        </blockquote>
+                    </div>
+
+                    <br>
+                </div>
+            </div>
+            <style>
+                blockquote {
+                    color: black;
+                }
+                .name-box {
+                    color: #117743;
+                    font-weight: bold;
+                }
+                .netscape-comment-top {
+                    display: block;
+                    width: 100%;
+                }
+                .netscape-comment {
+                    margin: 1px;
+                    background-color: #D6DAF0;
+                    border: 1px solid #B7C5D9;
+                }
+            </style>
         </div>
     </div>
     <div class="window" id="terminal-window">
@@ -39,14 +113,17 @@
                     <li>head pats</li>
                     <li>The EU</li>
                     <li>Right to repair</li>
-                    <li><a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en">This initiative</a></li>
+                    <li><a
+                            href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en">This
+                            initiative</a></li>
                 </ul>
             </details>
             <details>
                 <summary>dislikes</summary>
                 <ul>
                     <li>rap</li>
-                    <li><a href="https://www.youtube.com/watch?v=U7s_CaI93Mo">those who claim vibe coding is the future</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=U7s_CaI93Mo">those who claim vibe coding is the
+                            future</a></li>
                     <li>excessive doom scrollers</li>
                     <li>anything loud (tinnitus)</li>
                     <li>planned obsolescence</li>
@@ -146,30 +223,51 @@
                     --><div class="pic-block color-black length-2"></div>
                 </div>
             </div>
-            I use a <b>Syncan TK-105M</b> keyboard from 1991 (cleaned everything ofc). I own two ThinkPads (T440 and L440)
-            a dell Inspiron 17-574 (now a half-top) and my pc.
+            I use a <b>Syncan TK-105M</b> keyboard from 1991 (cleaned everything ofc). I own two ThinkPads (T440 and
+            L440) a dell Inspiron 17-574 (now a half-top) and my pc.
             <br>
             <em>this website is bet viewed at 1920x1080 resolution</em>
         </div>
     </div>
-    <nav id="navbar">
-        <ul id="navbar-list">
-            <li class="navbar-item"><button class="open-window" id="start" onclick="document.getElementById('welcome-window-bk').hidden=false">:3</button></li><li class="navbar-item"><button class="open-window" onclick="document.getElementById('window-example').hidden=false">Projects</button></li><li class="navbar-item"><button class="open-window" onclick="document.getElementById('terminal-window').hidden=false">Terminal!</button></li>
-        </ul>
-    </nav>
 </body>
 <style>
     * {
         font-family: 'Courier New', Courier, monospace;
         color: white;
     }
+
     body {
         background-color: black;
     }
+
+    .marquee {
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+
     .window-content {
         padding: 5px;
         color: white;
     }
+
     .window {
         min-width: 10rem;
         min-height: 10rem;
@@ -178,127 +276,210 @@
         position: absolute;
         background-color: black;
     }
+
     .window-top {
         height: 1.2rem;
         border-bottom: 1px solid #d600ff;
     }
+
     .window-top:hover {
         cursor: move;
     }
+
     .window-close {
         float: right;
     }
+
     .window-close:hover {
         color: red;
         cursor: pointer;
     }
+
     .window-title {
         display: inline-block;
         margin-left: 1rem;
     }
-    #navbar {
-        overflow: hidden;
-        width: 100%;
-        background-color: black;
-        border-top: 1px solid white;
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-    }
-    #navbar-list {
-        padding-left: 0px;
-        list-style: none;
-        margin: 0px;
-    }
-    .navbar-item {
-        display: inline;
-    }
+
     .open-window {
-        height: 3rem;
-        width: 10rem;
-        font-size: x-large;
+        text-decoration: none;
+        color: black;
+    }
+
+    .bg1 {
+        background-color: #20124d;
+    }
+
+    .fg1 {
+        color: #20124d;
+    }
+
+    .bg2 {
+        background-color: #351c75;
+    }
+
+    .fg2 {
+        color: #351c75;
+    }
+
+    .bg3 {
+        background-color: #674ea7;
+    }
+
+    .fg3 {
+        color: #674ea7;
+    }
+
+    .bg4 {
+        background-color: #b4a7d6;
+    }
+
+    .fg4 {
+        color: #b4a7d6;
+    }
+
+    .bg5 {
+        background-color: #d9d2e9;
+    }
+
+    .fg5 {
+        color: #d9d2e9;
+    }
+
+    .bg6 {
+        background-color: #ffffff;
+    }
+
+    .fg9 {
+        color: #ffffff;
+    }
+
+    #powerline {
+        display: flex;
         background-color: black;
+        padding: 0;
+        height: 1.5em;
+        left: 0;
+        top: 10px;
+        right: 0;
+        position: absolute;
+        line-height: 1.5em;
+        bottom: 0;
+        overflow: hidden;
     }
-    #start {
-        width: 4rem;
+
+    .section {
+        padding: 0px 10px;
+        min-width: 10rem;
     }
+
+    .endsection {
+        width: 0;
+        height: 0;
+        position: relative;
+
+        border-top: 0.8em solid transparent;
+        border-bottom: 0.8em solid transparent;
+        border-left: 0.8em solid;
+    }
+
     .window-main {
         padding: 5px;
     }
+
     .length-1 {
         width: 1rem;
         height: 1rem;
     }
+
     .length-2 {
         width: 2rem;
         height: 1rem;
     }
+
     .length-3 {
         width: 3rem;
         height: 1rem;
     }
+
     .length-4 {
         width: 4rem;
         height: 1rem;
     }
+
     .length-5 {
         width: 5rem;
         height: 1rem;
     }
+
     .length-6 {
         width: 6rem;
         height: 1rem;
     }
+
     .length-7 {
         width: 7rem;
         height: 1rem;
     }
+
     .length-8 {
         width: 8rem;
         height: 1rem;
     }
+
     .length-12 {
         width: 12rem;
         height: 1rem;
     }
+
     .color-black {
         background-color: black;
     }
+
     .color-red {
         animation: blush 7s !important;
         background-color: red;
     }
+
     #bk {
         background-color: white;
         border: 1rem solid white;
-        padding-left: 10%; /* failed to centre div in css */
+        padding-left: 10%;
+        /* failed to centre div in css */
     }
+
     .pic-block {
         display: inline-block;
     }
+
     @keyframes blush {
         100% {
             background-color: red;
         }
+
         0% {
             background-color: white;
         }
     }
+
     .pic-block:nth-child(2n) {
         animation-delay: 2s;
         animation: grow 1s;
     }
+
     .pic-block:nth-child(3n) {
         animation-delay: 1.5s;
         animation: grow 2.5s;
     }
+
     .pic-block:nth-child(4n) {
         animation-delay: 0.5;
         animation: grow 2.5s;
     }
+
     .row {
         height: 1rem;
     }
+
     @keyframes grow {
         0% {
             opacity: 0;
@@ -306,41 +487,61 @@
             margin-left: 1rem;
         }
     }
+
     #terminal-window {
         width: 30rem;
     }
 </style>
 <script>
-    var selected_window, offset_x, offset_y, max_z_index=0;
-    let windows = document.getElementsByClassName("window")
+    var selected_window, offset_x, offset_y, max_z_index = 0;
+    let windows = document.getElementsByClassName("window");
 
-    for (let i = 0; i <windows.length; i++) {
+    let page_height = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.documentElement.clientHeight
+    );
+
+    let page_width = Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+    );
+
+    for (let i = 0; i < windows.length; i++) {
         let win = windows[i];
 
-        win.children[0].addEventListener("mousedown", function(event){
-            event.preventDefault()
-            selected_window = event.target.parentNode
-            
+        win.children[0].addEventListener("mousedown", function (event) {
+            event.preventDefault();
+            selected_window = event.target.parentNode;
+
             if (!selected_window.classList.contains("window"))
-                selected_window = selected_window.parentNode
-            
-            max_z_index++
+                selected_window = selected_window.parentNode;
+
+            max_z_index++;
             selected_window.style["z-index"] = max_z_index;
 
-            offset_x = event.offsetX
-            offset_y = event.offsetY
-        })
+            offset_x = event.offsetX;
+            offset_y = event.offsetY;
+        });
 
+        win.style.left = `${Math.round(Math.random() * 0.6 * page_width)}px`;
+        win.style.top = `${Math.round(Math.random() * 0.5 * page_height)}px`;
     }
 
-    document.addEventListener("mouseup" ,function(event) {
-        selected_window = null
-    })
+    document.addEventListener("mouseup", function (event) {
+        selected_window = null;
+    });
 
-    document.addEventListener("mousemove", function(event) {
+    document.addEventListener("mousemove", function (event) {
         if (selected_window == null) return;
         selected_window.style.left = `${event.clientX - offset_x}px`;
         selected_window.style.top = `${event.clientY - offset_y}px`;
-    })
+    });
 </script>
+
 </html>

@@ -1,60 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reirei</title>
-</head>
-
-<body>
-    <div id="loading-box" hidden>
-        <br>
-        <br>
-        <span id="loading-text">
-            Loading
-            <span id="loading_dot_1">.</span>
-            <span id="loading_dot_2">.</span>
-            <span id="loading_dot_3">.</span>
-        </span>
-        <br>
-        <span id="loading-percent">
-            0%
-        </span>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <title>adsf</title>
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <meta name="description" content="" />
+ </head>
+ <body>
+  <div id="app">
+    <div id="start-text">Right Click to Start</div>
+    <div id="left-bar">
+      <button class="tile" id="tile-welcome-window" onclick="bringtotop('welcome-window')"><div class="tile-label">Welcome</div></button>
+      <button class="tile" id="tile-tourism-window" onclick="bringtotop('tourism-window')"><div class="tile-label">Cool places</div></button>
+      <button class="tile" id="tile-music-window" onclick="bringtotop('music-window')"><div class="tile-label">Stuff I listen to</div></button>
+      <button class="tile" id="tile-watchlist-window" onclick="bringtotop('watchlist-window')"><div class="tile-label">Watchlist</div></button>
+      <button class="tile" id="tile-buttons-window" onclick="bringtotop('buttons-window')"><div class="tile-label">Buttons</div></button>
+      <button class="tile" id="tile-open-windows-window" onclick="bringtotop('open-windows-window')"><div class="tile-label">Launcher</div></button>
+      <button class="tile" id="tile-settings-window" onclick="bringtotop('settings-window')"><div class="tile-label">Settings</div></button>
     </div>
-    <div id="main">
-        <h1 style="font-size: 50px;">Hi I'm reirei</h1>
-        <hr>
-        <div>
-            <div style="display: block; float: right;">
-                <img src="imgs/pfp.jpg" id="main-pfp">
-                <div style="font-size: 30px">
-                    Hai~
-                    <br>
-                    I am a computer science student based in <em>Europe</em>, I daily drive <em>Arch</em> and use <em>Qtile</em>
-                    as my window manager. I usually write stuff in <em>Python</em> or <em>C</em> using <em>helix</em>. I am
-                    learning <em>rust</em>, and intend to go into embedded systems or cyber security.
-                    <br>
-                    I use a thinkpad L440 as my flagship workstation.
-                </div>
-            </div>
+    <div class="window" id="welcome-window">
+      <div class="window-top">
+        <div class="window-title" id="welcome-window-title">Welcome</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('welcome-window')">X</a></div>
+      </div>
+      <div class="window-content">
+        <div style="overflow:auto">
+          <img src="./imgs/alstofo-happy.png" style="width:10rem; float: right;margin-top:1.2rem">
+          <h1>Hai~</h1>
+          <p style="width: 30rem">
+            I'm a silly femboy, I wear thigh highs, a skirt and studdy
+            computer science. I also enjoy math from time to time and use
+            arch btw
+          </p>
         </div>
-        <hr>
-        <div>
-            <p id="quote"></p>
-        </div>
-        <hr>
-        <h2>Contact</h2>
-        <p>
-            You can contact me by telepathy, but for those of you who can't, my email is <b>r29621136@gmail.com</b>. I
-            am chronically online, so you can also contact me via discord
-            <a href="https://discordapp.com/users/827181645672480798/">here</a>. I am typically online between 2100 
-            and 2330 (<a href="https://time.is/CET">CET, UTC+1</a>) on week days. I am usually available all the time
-            on the weekends.
-        </p>
+      </div>
+    </div>
+    <div class="window" id="settings-window">
+      <div class="window-top">
+        <div class="window-title" id="settings-window-title">Settings</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('settings-window')">X</a></div>
+      </div>
+      <div class="window-content">
+        <button style="width: 100%" onclick="javascript:settheme(0)">Fall</button><br>
+        <button style="width: 100%" onclick="javascript:settheme(1)">Binbows</button><br>
+      </div>
+    </div>
+    <div class="window" id="buttons-window">
+      <div class="window-top">
+        <div class="window-title" id="buttons-window-title">Buttons</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('buttons-window')">X</a></div>
+      </div>
+      <div class="window-content" style="width: 30rem;">
+        Here is my button:
+        <br>
+        <img src="buttons/reirei-btn.png" width="176px">
+        <br>
+        <a href="https://wearr.dev/"><img class="button-88x31" src="buttons/wearr-btn.gif"></a><a href="https://iczelia.net/"><img class="button-88x31" src="buttons/iczelia-btn.png"></a><img src="buttons/nocookie.gif" class="button-88x31"><img src="buttons/archlinux.gif" class="button-88x31"><img src="buttons/btwarchlinux.gif" class="button-88x31"><img src="buttons/gnu-linux.gif" class="button-88x31"><a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books"><img src="buttons/anime-girls-holding-programming-books.png" class="button-88x31"></a><iframe id="btn" src="//incr.easrng.net/badge?key=reirei-github-io" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="window" id="open-windows-window">
+      <div class="window-top">
+        <div class="window-title" id="open-windows-window-title">Launcher</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('open-windows-window')">X</a></div>
+      </div>
+      <div class="window-content">
+        <button style="width: 150px" onclick="openwindow('welcome-window');bringtotop('welcome-window');">Welcome!</button><br>
+        <button style="width: 150px" onclick="openwindow('tourism-window');bringtotop('tourism-window');">Cool places</button><br>
+        <button style="width: 150px" onclick="openwindow('music-window');bringtotop('music-window');">Stuff I listen to</button><br>
+        <button style="width: 150px" onclick="openwindow('watchlist-window');bringtotop('watchlist-window');">Watchlist</button><br>
+        <button style="width: 150px" onclick="openwindow('buttons-window');bringtotop('buttons-window');">Buttons</button><br>
+        <button style="width: 150px" onclick="openwindow('settings-window');bringtotop('settings-window');">Settings</button><br>
+      </div>
+    </div>
+    <div class="window" id="tourism-window">
+      <div class="window-top">
+        <div class="window-title" id="tourism-window-title">Places I have been</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('tourism-window')">X</a></div>
+      </div>
+      <div class="window-content">
+        I have visited these counteries:
+        <ul>
+            <li>Germany (Köln, Berlin, Stuttgart und Bonn)</li>
+            <li>France (Paris and the Ardeche)</li>
+            <li>Netherlands (Amsterdam)</li>
+            <li>UK (London, Edinburgh, Stone Henge, Ben Nevis, Mt Snowdon, Scafell Pike)</li>
+            <li>Austria (Lake Achensee in Tyrol)</li>
+            <li>Turkey</li>
+            <li>Italy (Rome)</li>
+            <li>Greece (Athens)</li>
+            <li>Belgium</li>
+            <li>Spain (Mallorca and Tenerife)</li>
+            <li>United States America (NYC, Hoover Dam, San Fransisco, Washington DC, Boston)</li>
+            <li>Canada (Toronto)</li>
+            <li>Jordan (Dead Sea, Petra, Red Sea)</li>
+            <li>Hong Kong (The Peak)</li>
+            <li>Taiwan (Taipei 101, Chiang Kai Shek Memorial Hall, ate hotpot)</li>
+            <li>South Korea (DMZ, Soul)</li>
+            <li>Japan (Kyoto, Mt Inariyama)</li>
+        </ul>
+        I have been in the following countries (e.g. stop over flights)
+        <ul>
+            <li>Switzerland (Zurich International Airport)</li>
+            <li>UAE (Abudhc Dabi, Zayed International Airport)</li>
+            <li>Mexico (Tijuana)</li>
+            <li>Luxembourg</li>
+        </ul>
+      </div>
+    </div>
+    <div class="window" id="music-window">
+      <div class="window-top">
+        <div class="window-title" id="music-window-title">Music</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('music-window')">X</a></div>
+      </div>
+      <div class="window-content">
         <h2>Music Taste</h2>
-        <p>
-            It's all <a href="https://en.wikipedia.org/wiki/Neue_Deutsche_H%C3%A4rte">NDH</a> (or other heavy metal)
+        It's all <a href="https://en.wikipedia.org/wiki/Neue_Deutsche_H%C3%A4rte">NDH</a> (or other heavy metal)
         <ul>
             <li><a href="https://youtu.be/w6-6XHnmFtI">Reise Reise - Ramstein</a></li>
             <li><a href="https://youtu.be/StZcUAPRRac">Sonne - Ramstein</a></li>
@@ -63,40 +123,17 @@
             <li><a href="https://youtu.be/GukNjYQZW8s">Haifisch - Ramstein </a></li>
             <li><a href="https://youtu.be/s2vC65MuPRs">Adieu - Ramstein </a></li>
             <li><a href="https://youtu.be/xR1cVBlFXIw">Radio - Ramstein</a></li>
-            <li><a href="https://youtu.be/oVWEb-At8yc">Bismarck - SABATON</a></li>
             <li><a href="https://youtu.be/UCXT_CkH_bs">Herz aus Eis - EISBRECHER</a></li>
         </ul>
-        </p>
-        <h2>Places I have been</h2>
-        I have visited the following countries/Places:
-        <ul>
-            <li>Germany</li>
-            <li>France</li>
-            <li>Netherlands</li>
-            <li>UK</li>
-            <li>Austria</li>
-            <li>Turkey</li>
-            <li>Italy</li>
-            <li>Greece</li>
-            <li>Belgium</li>
-            <li>Spain (Mallorca and Tenerife)</li>
-            <li>United States America</li>
-            <li>Canada</li>
-            <li>Jordan</li>
-            <li>Hong Kong</li>
-            <li>Taiwan</li>
-            <li>Korea (South and DMZ)</li>
-            <li>Japan</li>
-        </ul>
-        I have been in the following countries (e.g. stop over flights)
-        <ul>
-            <li>Switzerland</li>
-            <li>UAE</li>
-            <li>Mexico</li>
-            <li>Luxembourg</li>
-        </ul>
-        <h2>Stuff I've Watched</h2>
-        It's all anime, (I don't really know what you may have expected). Only listing stuff I enjoyed:
+      </div>
+    </div>
+    <div class="window" id="watchlist-window">
+      <div class="window-top">
+        <div class="window-title" id="watchlist-window-title">Stuff I've watched</div>
+        <div class="window-close"><a class="close-link" href="javascript:closewindow('watchlist-window')">X</a></div>
+      </div>
+      <div class="window-content">
+        Here is everything major I've watched (5+ hours and good):
         <ul>
             <li>Re:ZERO
                 <ul>
@@ -148,269 +185,192 @@
                 </ul>
             </li>
         </ul>
-        <details>
-            <summary>My opinion of the Minecraft Movie</summary>
-            <img src="imgs/meme-tsissoa.gif">
-        </details>
-        <h2>Portable Workstation</h2>
-        <p>
-            I have a Thinkpad L440 as my portable workstation, it is equipped with the following hardware:
-            <ul>
-                <li>CPU Intel Core I3-4100M@2.5GHz (will be upgraded to an I7)</li>
-                <li>M.2 22422 [EMPTY]</li>
-                <li>256GB Kingston SSD primary storage</li>
-                <li>512GB WD HDD secondary storage (swapped the optical drive out for a HDD caddy, unreliable)</li>
-                <li>8GB Ram in (2x4GB configuration)</li>
-                <li>Wifi Card [Who cares?]</li>
-                <li>Battery [The default one]</li>
-            </ul>
-            I have also made some aesthetic modifications to the laptop:
-            <ul>
-                <li>Stickers</li>
-                <li>(Software) <a href="imgs/enterprise.png">Desktop Wallpaper</a></li>
-                <li>(Software) <a href="imgs/haruhi.png">LightDM Background</a></li>
-                <li>(Software) Custom Qtile config</li>
-            </ul>
-        </p>
-        <h2>People Buttons</h2>
-        <p>
-            <a href="https://wearr.dev/"><img class="button-88x31" src="buttons/wearr-btn.gif"></a>
-            <a href="https://iczelia.net/"><img class="button-88x31" src="buttons/iczelia-btn.png"></a>
-            <br>
-            If you find this website interesting, I suppose you could link it... (plz link me)
-            <br>
-            <img src="/buttons/reirei-btn.png" width="88px">
-        </p>
-        <h2>Other Buttons</h2>
-        <p>
-            <img src="buttons/nocookie.gif" class="button-88x31">
-            <img src="buttons/archlinux.gif" class="button-88x31">
-            <img src="buttons/btwarchlinux.gif" class="button-88x31">
-            <img src="buttons/gnu-linux.gif" class="button-88x31">
-            <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books"><img src="buttons/anime-girls-holding-programming-books.png" class="button-88x31"></a>
-            <iframe id="btn" src="//incr.easrng.net/badge?key=reirei-github-io"
-                style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31"
-                frameborder="0"></iframe>
-            <br>
-        </p>
-        <img src="imgs/enterprise-chibi-left.png" id="mouse" onerror="this.remove()" hidden>
     </div>
-    <style>
-        .content-creator-list {
-            border: 1px solid #C0C0C0;
-            display: inline-block;
-            padding: 5px;
-        }
-        #quote {
-            margin-left: 10%;
-            margin-right: 10%;
-            text-align: center;
-            font-style: italic;
-            min-height: 5rem;
-        }
-        #quote:hover {
-            cursor: pointer;
-        }
-        #mouse {
-            position: absolute;
-            width: 35px;
-            animation: mouse-wobble 1s infinite;
-            animation-timing-function: ease-in;
-            transform: scaleX(1);
-        }
-        @keyframes mouse-wobble {
-            0% {
-                transform: rotate(5deg);
-            }
-            50% {
-                transform: rotate(-5deg);
-            }
-            100% {
-                transform: rotate(5deg);
-            }
-        }
-        #loading-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+  </div>
+ </body>
+ <style>
+  :root {
+    --window-boarder-outline: black;
+    --window-bar-bg-color: black;
+    --window-attrs-border: grey;
+    --window-bg-color: white;
+    --window-close-bg: black;
+  }
+  #left-bar {
+    float: right;
+    position: absolute;
+  }
+  .tile {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    border-left: 3px solid grey;
+    border-top: 3px solid grey;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+  }
+  .tile-text {
+    transform:rotate(45deg);
+  }
+  button {
+    border-radius: 0px;
+  }
+  .window {
+    top: 5rem;
+    left: 40%;
+    border: 1px solid var(--window-boarder-outline);
+    background-color: var(--window-bg-color);
+    position: absolute;
+    overflow: visible;
+  }
+  .window-top {
+    background-color: var(--window-bar-bg-color);
+    color: white;
+  }
+  .window-title {
+    min-width: 7.5rem;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid var(--window-attrs-border);
+    width: calc(100% - 24px);
+  }
+  .window-title:hover {
+    cursor: grab;
+  }
+  .window-close {
+    display: inline-block;
+    float: right;
+    text-align: center;
+    width: 20px;
+    border: 1px solid var(--window-attrs-border);
+    background-color: var(--window-close-bg);
+  }
+  .close-link {
+    color: white;
+    text-decoration: none;
+  }
+  .close-link:hover {
+    color: red;
+  }
+  .window-content {
+    border: 1px solid var(--window-attrs-border);
+  }
+  #app {
+    padding:0;
+    margin:0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("./imgs/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+  }
+  #start-text {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    font-weight: 900;
+    color: black;
+    font-size: 14pt;
+    background-color: #fff;
+    padding: 2px;
+    border-left: 2px solid grey;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+  }
+  * {
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  img { 
+      image-rendering: optimizeSpeed;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: pixelated;
+      image-rendering: optimize-contrast;
+      -ms-interpolation-mode: nearest-neighbor;
+  }
+  h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .button-88x31 {
+    width: 88px;
+    height: 31px;
+    display: inline-block;
+    margin: 1px;
+  }
+  .tile-label {transform: rotate(45deg);
+  }
+ </style>
+ <script>
+    function openwindow(name){document.getElementById(name).hidden=false;document.getElementById("tile-"+name).style.display="block";}
+    function closewindow(name){document.getElementById(name).hidden=true;document.getElementById("tile-"+name).style.display="none";}
+    function settheme(theme) {
+      let root = document.querySelector(":root").style;
+      if (theme == 0) {
+        root.setProperty("--window-boarder-outline", "black");
+        root.setProperty("--window-bar-bg-color", "black");
+        root.setProperty("--window-attrs-border", "grey");
+        root.setProperty("--window-bg-color", "white");
+        root.setProperty("--window-close-bg", "black");
+        document.getElementById("app").style["background-image"] = "url('./imgs/wallpaper.jpg')"
+        document.getElementById("app").style["background-color"] = "none"
+      } else if (theme == 1) {
+        root.setProperty("--window-boarder-outline", "black");
+        root.setProperty("--window-bar-bg-color", "#010081");
+        root.setProperty("--window-attrs-border", "white");
+        root.setProperty("--window-bg-color", "white");
+        root.setProperty("--window-close-bg", "#c3c3c3");
+        document.getElementById("app").style["background-image"] = "none"
+        document.getElementById("app").style["background-color"] = "#008080"
+      }
+    }
+    
+    var selected_window, offset_x, offset_y, max_z_index = 0;
+    let windows = document.getElementsByClassName("window");
 
-            margin-left: -10rem;
-            margin-top: -5rem;
-            width: 20rem;
-            height: 10rem;
-            border: 1px solid white;
+    for (w of windows) {
+      document.getElementById(w.id+"-title").addEventListener("mousedown", ((e) => {
+        e.preventDefault()
+        selected_window = document.getElementById(e.target.id.substring(0, e.target.id.length - 6));
 
-            text-align: center;
+        max_z_index++;
+        selected_window.style["z-index"] = max_z_index;
 
-            font-size: 25px;
-            color: white;
+        offset_x = event.offsetX;
+        offset_y = event.offsetY;
+      }))
+    }
 
-            background-color: red;
+    function bringtotop(windowname){
+      max_z_index++;
+      document.getElementById(windowname).style["z-index"] = max_z_index;
+    }
 
-            font-family: 'Courier New', Courier, monospace;
+    document.addEventListener("mouseup", function (event) {
+        selected_window = null;
+    });
 
-            font-weight: 900;
-        }
+    document.addEventListener("mousemove", function (event) {
+        if (selected_window == null) return;
+        if (event.clientX - offset_x > 0)selected_window.style.left = `${event.clientX - offset_x}px`;
+        if (event.clientY - offset_y > 0)selected_window.style.top = `${event.clientY - offset_y}px`;
+    });
+    document.getElementById("app").addEventListener("contextmenu", ((event) => {
+      event.preventDefault();
+      document.getElementById("start-text").hidden=true;
+      let launcher = document.getElementById("open-windows-window");
+      launcher.style.left = `${event.clientX}px`
+      launcher.style.top = `${event.clientY}px`
+      launcher.hidden=false;
+      bringtotop("open-windows-window")
+    }))
 
-        #main {
-            background-color: #101010;
-            margin-top: 3rem;
-            padding: 10px;
-            border: 1px solid #FFD700;
-        }
-        @media (min-width: 1000px) {
-            #main {
-                margin-left: 15rem;
-                margin-right: 15rem;
-            }
-        }
-        #main-pfp {
-            display: block;
-            float:right;
-            width: 15rem;
-            padding: 5px;
-            margin-right: 5rem;
-            font-size: 20px;
-        }
-        @media (max-width: 445px){
-            #main-pfp{
-                float: none;
-                width: 90% !important;
-            }
-        }
-        h1, h2, h3 {
-            color: white;
-        }
-
-        body {
-            background-color: black;
-            color: #C0C0C0;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
-        a {
-            color: #D0D0D0;
-        }
-
-        .blink_text {
-            animation: blink 0.2s linear infinite;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            49% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-        #loading_dot_1 {animation: blink 0.3s linear infinite; animation-delay: none;}
-        #loading_dot_2 {animation: blink 0.3s linear infinite; animation-delay: 0.1s;}
-        #loading_dot_3 {animation: blink 0.3s linear infinite; animation-delay: 0.2s}
-    </style>
-    <script>
-        document.getElementById("main").hidden = true;
-        document.getElementById("loading-box").hidden = false;
-
-        document.getElementById("mouse").hidden = false;
-
-        var target_x = 0, target_y = 0, current_x = 0, current_y=0, speed=0.001, positions = Array();
-
-        function update_percent() {
-            let percent = parseInt(document.getElementById("loading-percent").innerText.replace("%", ""));
-            percent = percent + Math.abs(Math.random()) * 5
-
-            if (percent > 100) {
-                //document.getElementById("loading-percent").innerText = `100%`
-
-                document.getElementById("loading-percent").innerText = `[[LOADING COMPLETE]]`
-                document.getElementById("loading-percent").className = "blink_text"
-                setTimeout(() => {
-                    document.getElementById("loading-box").hidden = true;
-                    document.getElementById("main").hidden = false;
-                }, 1000)
-
-                add_mouse_event();
-                add_quote();
-
-                return
-            }
-            else {
-                document.getElementById("loading-percent").innerText = `${percent.toFixed(2)}%`
-                setTimeout(update_percent, 75)
-            }
-        }
-        update_percent()
-        
-        function add_mouse_event() {
-            document.addEventListener("mousemove", function(event){
-                if (event.pageX > current_x) {
-                    document.getElementById("mouse").src = 'imgs/enterprise-chibi-right.png'
-                } else {
-                    document.getElementById("mouse").src = 'imgs/enterprise-chibi-left.png'
-                }
-                target_x = event.pageX;
-                target_y = event.pageY;
-
-                setTimeout(fun, 1000)
-            })
-        }
-
-        function fun() {
-            if (Math.abs(target_x-current_x) < 10 && Math.abs(target_y-current_y) < 10) return;
-
-            current_x += (target_x - current_x)*speed;
-            current_y += (target_y - current_y)*speed;
-            document.getElementById("mouse").style.left = `${current_x}px`;
-            document.getElementById("mouse").style.top = `${current_y}px`;
-
-            setTimeout(fun, 10)
-        }
-
-        function add_quote(){
-            let quotes = [
-                "Humans are allergic to change. They love to say, `We've always done it this way.` I try to fight that. That's why I have a clock on my wall that runs counterclockwise - Grace Hopper",
-                "Computers are incredibly fast, accurate and stupid. Human beings are incredibly slow, inaccurate and brilliant. Together they are powerful beyond imagination. - Albert Einstein(ium)",
-                "Anyone who thinks that [number of lines of code written per day] is a valid metric is too stupid to work at a tech company - Linus Torvalds",
-                "A good programmer is someone who always looks both ways before crossing a one-way street. - Doug Linder",
-                "The difference between stupidity and genius is that genius has it's limits - Einstein",
-                "|Meow~〉 + |...〉 - Schrödinger's cat",
-                "The original question, 'Can machines think?' I believe to be too meaningless to deserve discussion. - Alan Turing",
-                "Of course I'm good at maths it's my middle name - Alan Matheson Turing (not genuine quote, but I bet he said did)",
-                "� - Unicode",
-                "□ - Also Unicode",
-                "R��m�k2�x�=6&&6=;++*%5%�n3���������h��6�4��}���j�oJQN�T��Q�f����L���� - Binary file formats",
-                "Not only ... but also ... - AI",
-                "POV: Linkedin posts; Me: Oh ... Em-Dashes everywhere",
-                "Naruto Running - The US Army Power Point (Area 51 Raid)",
-                "There are only three things that attract in the universe: Gravity, Magnets and Love - My Physics Teacher",
-                "Do you take physics? - Literally everyone",
-                "My IQ could be measured with a pH strip - Kenadian",
-                "ᒲ╎リᒷᓵ∷ᔑ⎓ℸ ̣ ᒷリᓵ⍑ᔑリℸ ̣╎リ⊣ ℸ ̣ᔑʖꖎᒷ - Bayerisch",
-                "An empty search history reveals more than a full one. - Sun Tzu",
-                "When I die, I swear to God I hope no one makes up fake quotes from my book. - Sun Tzu",
-                "Whoever reads this needs to eat more vegetables - Growlingcorn654",
-                "Also the game"
-            ];
-
-            document.getElementById("quote").innerText = quotes[Math.round([Math.random()*(quotes.length-1)])]
-        }
-        document.getElementById("quote").addEventListener("click", function(event){
-            event.preventDefault();
-
-            add_quote()
-        })
-    </script>
-</body>
-
+    for (k of ['welcome-window', 'tourism-window', 'music-window', 'watchlist-window', 'buttons-window', 'open-windows-window', "settings-window"]) closewindow(k);
+ </script>
 </html>
